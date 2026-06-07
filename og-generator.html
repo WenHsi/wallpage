@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>OG Thumbnail Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #ddd8d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 28px;
+  font-family: 'Noto Serif TC', serif;
+  padding: 40px;
+}
+
+/* ── 預覽框 ── */
+#og {
+  width: 1200px;
+  height: 630px;
+  background: #f5f0ea;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.18);
+}
+
+/* 右側暈染 */
+#og::before {
+  content: '';
+  position: absolute;
+  right: 160px; top: 50%;
+  transform: translateY(-50%);
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,169,106,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── 左半內容 ── */
+.left {
+  position: absolute;
+  left: 100px;
+  top: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.label {
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.28em;
+  color: rgba(160,135,100,0.85);
+  margin-bottom: 20px;
+}
+.title {
+  font-size: 96px;
+  font-weight: 700;
+  color: #1c1814;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.divider {
+  width: 52px;
+  height: 2px;
+  background: #c8a070;
+  margin-bottom: 20px;
+}
+.tagline {
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(72,56,38,0.82);
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+}
+.url {
+  position: absolute;
+  left: 100px;
+  bottom: 52px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(172,148,112,0.75);
+  letter-spacing: 0.06em;
+}
+
+/* ── 右半手機 ── */
+.phone-wrap {
+  position: absolute;
+  right: 96px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.phone {
+  width: 232px;
+  height: 482px;
+  background: #1c1814;
+  border-radius: 38px;
+  padding: 8px;
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.06) inset,
+    0 32px 64px rgba(0,0,0,0.22),
+    0 8px 24px rgba(0,0,0,0.14);
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  background: #f0eae0;
+  border-radius: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 動態島 */
+.island {
+  width: 46px;
+  height: 13px;
+  background: #1c1814;
+  border-radius: 7px;
+  margin-top: 14px;
+  flex-shrink: 0;
+}
+
+/* 時鐘區 */
+.lock-date {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(40,28,16,0.52);
+  margin-top: 16px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  width: 100%;
+}
+.lock-clock {
+  font-size: 66px;
+  font-weight: 700;
+  color: #1c1814;
+  line-height: 1;
+  margin-top: 4px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  width: 100%;
+}
+
+/* 壁紙文字 */
+.lock-spacer { flex: 1; }
+.lock-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(40,28,16,0.8);
+  text-align: center;
+  line-height: 2.1;
+  padding: 0 20px;
+  letter-spacing: 0.04em;
+}
+.lock-spacer2 { flex: 1; }
+
+/* Home bar */
+.homebar {
+  width: 56px;
+  height: 4px;
+  background: rgba(28,24,20,0.2);
+  border-radius: 2px;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+/* ── 下載按鈕 ── */
+button {
+  background: #1c1814;
+  color: #f0eae0;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+button:hover { opacity: 0.78; }
+small {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 12px;
+  color: #aaa;
+  letter-spacing: 0.04em;
+}
+</style>
+</head>
+<body>
+
+<div id="og">
+  <!-- 左半 -->
+  <div class="left">
+    <div class="label">WALLPAPER STUDIO</div>
+    <div class="title">壁紙工作室</div>
+    <div class="divider"></div>
+    <div class="tagline">在手機桌布上寫下你的句子</div>
+  </div>
+  <div class="url">wenhsi.github.io/wallpaper-studio</div>
+
+  <!-- 右半：手機 -->
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="screen">
+        <div class="island"></div>
+        <div class="lock-date">週日　6月8日</div>
+        <div class="lock-clock">9:41</div>
+        <div class="lock-spacer"></div>
+        <div class="lock-text">此刻即是<br>最好的時刻</div>
+        <div class="lock-spacer2"></div>
+        <div class="homebar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button onclick="capture()">⬇ 下載 og-thumbnail.png（1200×630）</button>
+<small>字體載入後再按下載，效果最佳</small>
+
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script>
+// 只抓畫面上實際用到的字元，避免抓整個 Noto Serif TC（幾十個 subset）
+async function inlineFonts() {
+  const chars = '壁紙工作室在手機桌布上寫下你的句子WALLPAPER STUDIOwenhsi.github.io/wallpaper-studio週日6月8日9:41每一天，都是重新開始的機會。';
+  const cssUrl = `https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700&text=${encodeURIComponent(chars)}&display=swap`;
+  const cssResp = await fetch(cssUrl);
+  const css = await cssResp.text();
+
+  // 把每個 woff2 URL 換成 base64 data URI
+  const fontUrls = [...css.matchAll(/url\((https:\/\/[^)]+)\)/g)].map(m => m[1]);
+  let inlinedCss = css;
+  await Promise.all(fontUrls.map(async (url) => {
+    const blob = await (await fetch(url)).blob();
+    const b64 = await new Promise(r => {
+      const reader = new FileReader();
+      reader.onloadend = () => r(reader.result);
+      reader.readAsDataURL(blob);
+    });
+    inlinedCss = inlinedCss.replace(url, b64);
+  }));
+
+  const style = document.createElement('style');
+  style.id = 'inlined-fonts';
+  style.textContent = inlinedCss;
+  document.head.appendChild(style);
+  await document.fonts.ready;
+}
+
+async function capture() {
+  const btn = document.querySelector('button');
+  btn.textContent = '⏳ 準備中…';
+  btn.disabled = true;
+
+  await inlineFonts();
+
+  const el = document.getElementById('og');
+  const opts = { width: 1200, height: 630, pixelRatio: 3, quality: 1 };
+  await htmlToImage.toPng(el, opts); // 第一次建快取
+  const dataUrl = await htmlToImage.toPng(el, opts);
+
+  document.getElementById('inlined-fonts')?.remove();
+
+  const a = document.createElement('a');
+  a.download = 'og-thumbnail.png';
+  a.href = dataUrl;
+  a.click();
+
+  btn.textContent = '⬇ 下載 og-thumbnail.png（1200×630）';
+  btn.disabled = false;
+}
+</script>
+</body>
+</html>
