@@ -13,6 +13,29 @@
 - **字體**：Google Fonts CDN（Noto Serif TC、Noto Sans TC、LXGW WenKai TC、Zen Maru Gothic、M PLUS Rounded 1c、DotGothic16、DM Serif Display、DM Mono、Playfair Display、Cormorant Garamond、Lora、Raleway、Josefin Sans、Cinzel）
 - **儲存**：localStorage（key prefix: `wps4_`）
 
+### 資料夾結構
+
+```
+壁紙工作室/
+├── index.html               # 主程式（全部 inline）
+├── favicon.png              # 瀏覽器分頁 icon（根目錄必要，瀏覽器自動抓）
+├── apple-touch-icon.png     # iOS 主畫面 icon（根目錄必要，iOS 自動抓）
+├── .gitignore
+├── CLAUDE.md
+├── README.md
+├── assets/
+│   └── og-thumbnail.png     # OG 分享縮圖（1200×630），og:image 路徑指向此
+└── tools/                   # 本地開發工具，不影響線上功能
+    ├── og-generator.html    # OG 縮圖產生器
+    └── icon-generator.html  # Icon 產生器（四種風格 A/B/C/D，三種尺寸）
+```
+
+**tools/ 產生器技術說明**
+- 使用 `html-to-image`（jsdelivr CDN）而非 html2canvas，保留原生字體渲染
+- 截圖前先 fetch Google Fonts CSS → 解析 woff2 URL → 轉 base64 inline 注入，確保字體一致
+- 呼叫兩次 `htmlToImage.toPng()`：第一次建字體快取，第二次才是真正輸出
+- `pixelRatio: 3`，直接輸出 3x 解析度（不縮圖），文字邊緣最銳利
+
 ---
 
 ## Layout
@@ -363,6 +386,7 @@ window.copyLink = function () {
 
 | 版本 | 主要內容 |
 |------|---------|
+| chore | 加入 favicon / apple-touch-icon、assets/ 資料夾、tools/ 產生器、.gitignore |
 | v1.0.1 | 手機版點擊預覽空白區關閉抽屜 |
 | v1.0.0 | 正式版：配色組合、橫向智能排版修正（getLandSafeZone）、分享連結載入順序修正 |
 | beta | localStorage 照片去重、橫向預覽 AR、iOS 存相簿、歷史紀錄、UI 打磨 |
