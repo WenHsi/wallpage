@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>Icon Generator — 壁紙工作室</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #ddd8d0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  gap: 0;
+  font-family: 'Noto Serif TC', serif;
+  padding: 60px 40px 80px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #999;
+  margin-bottom: 48px;
+}
+
+/* ── 每一組 variant ── */
+.variant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 56px;
+}
+
+.variant-label {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #aaa;
+  text-transform: uppercase;
+}
+
+.previews {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.preview-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview-item label {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.08em;
+}
+
+/* ── icon 共用 ── */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.icon-512 { width: 512px; height: 512px; border-radius: 112px; }
+.icon-180 { width: 180px; height: 180px; border-radius: 40px; }
+.icon-32  { width: 32px;  height: 32px;  border-radius: 7px; }
+
+.icon .char {
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+}
+
+.icon .accent {
+  position: absolute;
+  background: #c8a070;
+  border-radius: 2px;
+}
+
+/* ── A: 暖米底 + 金線 ── */
+.style-warm { background: #f5f0ea; }
+.style-warm .char { font-family: 'Noto Serif TC', serif; color: #1c1814; }
+.icon-512.style-warm .char  { font-size: 300px; }
+.icon-180.style-warm .char  { font-size: 106px; }
+.icon-32.style-warm  .char  { font-size: 19px; }
+.icon-512.style-warm .accent { width: 80px; height: 5px; bottom: 128px; }
+.icon-180.style-warm .accent { width: 28px; height: 2px; bottom: 44px; }
+.icon-32.style-warm  .accent { display: none; }
+
+/* ── B: 框線版 ── */
+.style-outline { background: #faf7f3; }
+.icon-512.style-outline { box-shadow: inset 0 0 0 14px #1c1814; }
+.icon-180.style-outline { box-shadow: inset 0 0 0 5px #1c1814; }
+.icon-32.style-outline  { box-shadow: inset 0 0 0 2px #1c1814; }
+.style-outline .char { font-family: 'Noto Serif TC', serif; color: #1c1814; }
+.icon-512.style-outline .char  { font-size: 300px; }
+.icon-180.style-outline .char  { font-size: 106px; }
+.icon-32.style-outline  .char  { font-size: 19px; }
+.icon-512.style-outline .accent { width: 80px; height: 5px; bottom: 128px; }
+.icon-180.style-outline .accent { width: 28px; height: 2px; bottom: 44px; }
+.icon-32.style-outline  .accent { display: none; }
+
+/* ── C: W 字母 ── */
+.style-w { background: #f5f0ea; }
+.style-w .char { font-family: 'Cormorant Garamond', serif; color: #1c1814; }
+.icon-512.style-w .char  { font-size: 340px; letter-spacing: -0.04em; }
+.icon-180.style-w .char  { font-size: 120px; letter-spacing: -0.04em; }
+.icon-32.style-w  .char  { font-size: 22px; letter-spacing: -0.04em; }
+.icon-512.style-w .accent { width: 80px; height: 5px; bottom: 128px; }
+.icon-180.style-w .accent { width: 28px; height: 2px; bottom: 44px; }
+.icon-32.style-w  .accent { display: none; }
+
+/* ── D: 深色底 ── */
+.style-dark { background: #1c1814; }
+.style-dark .char { font-family: 'Noto Serif TC', serif; color: #f0eae0; }
+.icon-512.style-dark .char  { font-size: 300px; }
+.icon-180.style-dark .char  { font-size: 106px; }
+.icon-32.style-dark  .char  { font-size: 19px; }
+.icon-512.style-dark .accent { width: 80px; height: 5px; bottom: 128px; }
+.icon-180.style-dark .accent { width: 28px; height: 2px; bottom: 44px; }
+.icon-32.style-dark  .accent { display: none; }
+
+/* ── 按鈕 ── */
+button {
+  background: #1c1814;
+  color: #f0eae0;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+button:hover { opacity: 0.78; }
+button:disabled { opacity: 0.35; cursor: default; }
+
+small {
+  font-size: 11px;
+  color: #aaa;
+  letter-spacing: 0.04em;
+  text-align: center;
+  line-height: 2;
+  margin-top: 24px;
+}
+</style>
+</head>
+<body>
+
+<h2>ICON GENERATOR — 壁紙工作室</h2>
+
+<!-- A: 暖米底 + 金線 -->
+<div class="variant">
+  <div class="variant-label">A　暖米底 + 金線</div>
+  <div class="previews">
+    <div class="preview-item">
+      <div class="icon icon-512 style-warm" id="iconA512"><div class="char">壁</div><div class="accent"></div></div>
+      <label>512</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-180 style-warm" id="iconA180"><div class="char">壁</div><div class="accent"></div></div>
+      <label>180</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-32 style-warm" id="iconA32"><div class="char">壁</div></div>
+      <label>32</label>
+    </div>
+  </div>
+  <button onclick="dl('A')">⬇ 下載 A</button>
+</div>
+
+<!-- B: 框線版 -->
+<div class="variant">
+  <div class="variant-label">B　框線版</div>
+  <div class="previews">
+    <div class="preview-item">
+      <div class="icon icon-512 style-outline" id="iconB512"><div class="char">壁</div><div class="accent"></div></div>
+      <label>512</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-180 style-outline" id="iconB180"><div class="char">壁</div><div class="accent"></div></div>
+      <label>180</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-32 style-outline" id="iconB32"><div class="char">壁</div></div>
+      <label>32</label>
+    </div>
+  </div>
+  <button onclick="dl('B')">⬇ 下載 B</button>
+</div>
+
+<!-- C: W 字母 -->
+<div class="variant">
+  <div class="variant-label">C　W 字母（Cormorant Garamond）</div>
+  <div class="previews">
+    <div class="preview-item">
+      <div class="icon icon-512 style-w" id="iconC512"><div class="char">W</div><div class="accent"></div></div>
+      <label>512</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-180 style-w" id="iconC180"><div class="char">W</div><div class="accent"></div></div>
+      <label>180</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-32 style-w" id="iconC32"><div class="char">W</div></div>
+      <label>32</label>
+    </div>
+  </div>
+  <button onclick="dl('C')">⬇ 下載 C</button>
+</div>
+
+<!-- D: 深色底 -->
+<div class="variant">
+  <div class="variant-label">D　深色底</div>
+  <div class="previews">
+    <div class="preview-item">
+      <div class="icon icon-512 style-dark" id="iconD512"><div class="char">壁</div><div class="accent"></div></div>
+      <label>512</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-180 style-dark" id="iconD180"><div class="char">壁</div><div class="accent"></div></div>
+      <label>180</label>
+    </div>
+    <div class="preview-item">
+      <div class="icon icon-32 style-dark" id="iconD32"><div class="char">壁</div></div>
+      <label>32</label>
+    </div>
+  </div>
+  <button onclick="dl('D')">⬇ 下載 D</button>
+</div>
+
+<small>
+  下載後將 <b>favicon.png</b> 和 <b>apple-touch-icon.png</b> 放入 repo 根目錄<br>
+  在 index.html &lt;head&gt; 加：<br>
+  &lt;link rel="icon" type="image/png" href="favicon.png"&gt;<br>
+  &lt;link rel="apple-touch-icon" href="apple-touch-icon.png"&gt;
+</small>
+
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<script>
+async function inlineFonts() {
+  if (document.getElementById('inlined-fonts')) return;
+  const chars = encodeURIComponent('壁W');
+  const cssUrl = `https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Cormorant+Garamond:wght@700&text=${chars}&display=swap`;
+  const css = await (await fetch(cssUrl)).text();
+  const fontUrls = [...css.matchAll(/url\((https:\/\/[^)]+)\)/g)].map(m => m[1]);
+  let inlined = css;
+  await Promise.all(fontUrls.map(async url => {
+    const blob = await (await fetch(url)).blob();
+    const b64 = await new Promise(r => {
+      const fr = new FileReader();
+      fr.onloadend = () => r(fr.result);
+      fr.readAsDataURL(blob);
+    });
+    inlined = inlined.replace(url, b64);
+  }));
+  const s = document.createElement('style');
+  s.id = 'inlined-fonts';
+  s.textContent = inlined;
+  document.head.appendChild(s);
+  await document.fonts.ready;
+}
+
+async function exportIcon(el, filename) {
+  const size = el.classList.contains('icon-512') ? 512
+             : el.classList.contains('icon-180') ? 180 : 32;
+  const opts = { width: size, height: size, pixelRatio: 3, quality: 1 };
+  await htmlToImage.toPng(el, opts);
+  const dataUrl = await htmlToImage.toPng(el, opts);
+  const a = document.createElement('a');
+  a.download = filename;
+  a.href = dataUrl;
+  a.click();
+  await new Promise(r => setTimeout(r, 500));
+}
+
+async function dl(v) {
+  const btns = document.querySelectorAll('button');
+  btns.forEach(b => b.disabled = true);
+  await inlineFonts();
+  const suffix = v === 'A' ? '' : `-${v.toLowerCase()}`;
+  await exportIcon(document.getElementById(`icon${v}512`), `icon-512${suffix}.png`);
+  await exportIcon(document.getElementById(`icon${v}180`), `apple-touch-icon${suffix}.png`);
+  await exportIcon(document.getElementById(`icon${v}32`),  `favicon${suffix}.png`);
+  btns.forEach(b => b.disabled = false);
+}
+</script>
+</body>
+</html>
