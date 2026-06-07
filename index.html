@@ -3,17 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>壁紙工作室</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&family=Jf+Open+Huninn&family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&family=Lora:wght@400;700&family=Raleway:wght@300;400;700&family=Josefin+Sans:wght@300;400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ══ 基本 SEO ══ -->
+<title>壁紙工作室 — 在手機桌布上寫下你的句子</title>
+<meta name="description" content="免費線上壁紙產生器。輸入文字、選擇字體與背景色彩，一鍵下載專屬手機桌布。支援 iPhone、Samsung、Pixel 等多種機型尺寸。">
+<meta name="keywords" content="壁紙工作室, 手機桌布, 桌布產生器, 文字壁紙, iPhone壁紙, 自訂壁紙, wallpaper maker, wenhsi">
+<meta name="author" content="wenhsi">
+<link rel="canonical" href="https://wenhsi.github.io/wallpaper-studio/">
+
+<!-- ══ Open Graph（Facebook / Line / Discord 分享縮圖）══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="壁紙工作室">
+<meta property="og:title" content="壁紙工作室 — 在手機桌布上寫下你的句子">
+<meta property="og:description" content="免費線上壁紙產生器。輸入文字、選擇字體與背景，一鍵下載專屬手機桌布。">
+<meta property="og:url" content="https://wenhsi.github.io/wallpaper-studio/">
+<meta property="og:image" content="https://wenhsi.github.io/wallpaper-studio/og-thumbnail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+
+<!-- ══ Twitter Card ══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="壁紙工作室 — 在手機桌布上寫下你的句子">
+<meta name="twitter:description" content="免費線上壁紙產生器。輸入文字、選擇字體與背景，一鍵下載專屬手機桌布。">
+<meta name="twitter:image" content="https://wenhsi.github.io/wallpaper-studio/og-thumbnail.png">
+<meta name="twitter:creator" content="@wenhsi">
+
+<!-- ══ 作者 / 聯絡 ══ -->
+<link rel="author" href="https://github.com/WenHsi">
+<meta name="contact" content="kevinwen2014@gmail.com">
+
+<!-- ══ 行動裝置 ══ -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="壁紙工作室">
+<meta name="theme-color" content="#f5f5f5">
+
+<!-- ══ 結構化資料（Google 搜尋卡片）══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "壁紙工作室",
+  "url": "https://wenhsi.github.io/wallpaper-studio/",
+  "description": "免費線上壁紙產生器，支援文字、字體、背景色彩自訂，下載專屬手機桌布。",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+  "author": {
+    "@type": "Person",
+    "name": "wenhsi",
+    "url": "https://github.com/WenHsi",
+    "email": "kevinwen2014@gmail.com"
+  }
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;700&family=LXGW+WenKai+TC:wght@300;400;700&family=Zen+Maru+Gothic:wght@300;400;700&family=M+PLUS+Rounded+1c:wght@300;400;700&family=DotGothic16&family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;700&family=Lora:wght@400;700&family=Raleway:wght@300;400;700&family=Josefin+Sans:wght@300;400;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  --bg:#111;--bg2:#191919;--bg3:#222;--bg4:#2c2c2c;
-  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
-  --accent:#d0d0d0;--accent2:#a8a8a8;--accent-dim:rgba(200,200,200,0.18);
-  --text:#f0f0f0;--text2:#909090;--text3:#505050;
-  --danger:#e05050;--r:12px;
-  --fs:15px;
+  --bg:#f5f5f5;--bg2:#ffffff;--bg3:#f0f0f0;--bg4:#e8e8e8;
+  --border:rgba(0,0,0,0.09);--border2:rgba(0,0,0,0.16);
+  --accent:#1a1a1a;--accent2:#444;--accent-dim:rgba(0,0,0,0.12);
+  --text:#111;--text2:#555;--text3:#999;
+  --danger:#d03030;--r:12px;
+  --fs:16px;
 }
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;font-size:var(--fs)}
 
@@ -24,9 +80,11 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .sidebar-header{padding:16px 16px 0;border-bottom:1px solid var(--border);flex-shrink:0}
 .logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--accent);padding-bottom:14px;display:flex;flex-direction:column}
 .logo-sub{font-family:'DM Mono',monospace;font-size:0.6rem;color:var(--text3);letter-spacing:0.2em;margin-top:3px}
+.credit-link{color:inherit;text-decoration:none;transition:color 0.15s,border-color 0.15s;border-bottom:1px solid transparent;padding-bottom:1px}
+.credit-link:hover{color:var(--text2);border-bottom-color:currentColor}
 .d-tab-nav{display:flex;border-bottom:1px solid var(--border);flex-shrink:0}
-.d-tab-btn{flex:1;padding:10px 2px;background:none;border:none;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:color 0.15s,background 0.15s;border-bottom:2px solid transparent;margin-bottom:-1px}
-.d-tab-btn .ico{font-size:1rem}
+.d-tab-btn{flex:1;padding:11px 2px;background:none;border:none;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.69rem;letter-spacing:0.05em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:color 0.15s,background 0.15s;border-bottom:2px solid transparent;margin-bottom:-1px}
+.d-tab-btn .ico{font-size:1.2rem}
 .d-tab-btn:hover{color:var(--text2);background:var(--bg3)}
 .d-tab-btn.active{color:var(--accent);border-bottom-color:var(--accent)}
 .d-panels{flex:1;overflow:hidden;position:relative;min-height:0}
@@ -34,25 +92,91 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .d-panel.active{display:block}
 /* Desktop download btn below preview */
 .desk-dl{display:flex;gap:8px;width:100%;justify-content:center}
-.desk-dl-btn{background:var(--accent);border:none;border-radius:8px;color:#111;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:700;padding:7px 18px;cursor:pointer;transition:opacity 0.15s;letter-spacing:0.06em}
+.desk-dl-btn{background:var(--accent);border:none;border-radius:8px;color:#fff;font-family:'DM Mono',monospace;font-size:0.75rem;font-weight:700;padding:7px 18px;cursor:pointer;transition:opacity 0.15s;letter-spacing:0.06em}
 .desk-dl-btn:hover{opacity:0.88}
 
 /* ══ PREVIEW ══ */
 .preview-area{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:var(--bg);position:relative;overflow:hidden}
 .undo-bar{position:absolute;top:12px;right:12px;display:flex;gap:5px;z-index:10}
-.undo-btn{background:rgba(28,24,20,0.88);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:0.85rem;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.12s;backdrop-filter:blur(4px)}
+.undo-btn{background:rgba(255,255,255,0.88);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:0.85rem;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.12s;backdrop-filter:blur(4px)}
 .undo-btn:hover:not(:disabled){color:var(--accent);border-color:var(--accent)}
 .undo-btn:disabled{opacity:0.2;cursor:not-allowed}
-.orient-btn{background:rgba(28,24,20,0.88);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:0.7rem;padding:0 11px;height:34px;cursor:pointer;transition:all 0.12s;backdrop-filter:blur(4px);font-family:'DM Mono',monospace;letter-spacing:0.06em;white-space:nowrap}
+.orient-btn{background:rgba(255,255,255,0.88);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:0.7rem;padding:0 11px;height:34px;cursor:pointer;transition:all 0.12s;backdrop-filter:blur(4px);font-family:'DM Mono',monospace;letter-spacing:0.06em;white-space:nowrap}
 .orient-btn:hover{color:var(--accent);border-color:var(--accent)}
 /* Mobile-only download in undo bar */
-.mob-dl-btn{display:none;background:var(--accent);border:1px solid var(--border2);border-radius:8px;color:#111;font-size:0.7rem;padding:0 11px;height:34px;cursor:pointer;font-family:'DM Mono',monospace;font-weight:700;letter-spacing:0.06em;white-space:nowrap;backdrop-filter:blur(4px)}
+.mob-dl-btn{display:none;background:var(--accent);border:1px solid var(--border2);border-radius:8px;color:#fff;font-size:0.7rem;padding:0 11px;height:34px;cursor:pointer;font-family:'DM Mono',monospace;font-weight:700;letter-spacing:0.06em;white-space:nowrap;backdrop-filter:blur(4px)}
 @media(max-width:700px){.mob-dl-btn{display:flex;align-items:center}}
 .phone-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
 .phone-frame{position:relative;border-radius:40px;border:3px solid var(--border2);overflow:hidden;background:#000;box-shadow:0 0 0 1px var(--bg4),0 20px 60px rgba(0,0,0,0.65),inset 0 1px 0 rgba(255,255,255,0.06)}
 .phone-notch{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:84px;height:24px;background:#000;border-radius:12px;z-index:10;pointer-events:none}
 #previewCanvas{display:block}
 .preview-meta{font-size:0.65rem;color:var(--text3);letter-spacing:0.08em;text-align:center}
+
+/* ══ LOCK OVERLAY ══ */
+/* 比例完全對應 iPhone 截圖 (1170×2532)，所有數值 = 截圖像素 / 1170 */
+.lock-overlay{position:absolute;inset:0;pointer-events:none;z-index:5;display:flex;flex-direction:column;align-items:center;user-select:none}
+/* Dynamic Island: 126pt/393pt=0.321 wide, 37pt/393pt=0.094 tall, top ~14pt/393pt=0.036 */
+.lo-island{width:calc(var(--pw,180px)*0.321);height:calc(var(--pw,180px)*0.094);background:#000;border-radius:999px;margin-top:calc(var(--pw,180px)*0.036);flex-shrink:0}
+/* Date: 17pt/390pt=0.044, margin from island ~0.056 */
+.lo-date{margin-top:calc(var(--pw,180px)*0.056);font-size:calc(var(--pw,180px)*0.046);font-weight:500;color:rgba(255,255,255,0.9);letter-spacing:0.01em;text-shadow:0 1px 8px rgba(0,0,0,0.4);font-family:-apple-system,system-ui,sans-serif}
+/* Clock: 340px/1170px=0.291，由文字寬度反推驗算一致 */
+.lo-clock{margin-top:calc(var(--pw,180px)*0.007);font-size:calc(var(--pw,180px)*0.291);font-weight:700;color:#fff;letter-spacing:-0.03em;line-height:1;text-shadow:0 2px 14px rgba(0,0,0,0.35);font-family:-apple-system,system-ui,sans-serif}
+/* Widgets: height 190/1170=0.162, row width ~1000/1170=0.855, gap 15/1170=0.013 */
+.lo-widgets{display:flex;gap:calc(var(--pw,180px)*0.013);margin-top:calc(var(--pw,180px)*0.017);width:calc(var(--pw,180px)*0.855);align-items:stretch}
+/* Rect: 600/1170≈0.513 of total, flex fills remaining */
+.lo-widget-rect{flex:1;min-height:calc(var(--pw,180px)*0.162);background:rgba(255,255,255,0.18);backdrop-filter:blur(10px);border-radius:calc(var(--pw,180px)*0.022);border:1px solid rgba(255,255,255,0.15);display:flex;flex-direction:column;justify-content:center;padding:0 calc(var(--pw,180px)*0.055)}
+.lo-widget-rect-title{font-size:calc(var(--pw,180px)*0.042);color:rgba(255,255,255,0.7);font-family:-apple-system,system-ui,sans-serif;white-space:nowrap;overflow:hidden}
+.lo-widget-rect-val{font-size:calc(var(--pw,180px)*0.072);font-weight:600;color:#fff;font-family:-apple-system,system-ui,sans-serif;margin-top:calc(var(--pw,180px)*0.008)}
+.lo-widget-rect-sub{font-size:calc(var(--pw,180px)*0.038);color:rgba(255,255,255,0.6);font-family:-apple-system,system-ui,sans-serif;margin-top:calc(var(--pw,180px)*0.01);border-top:1px solid rgba(255,255,255,0.2);padding-top:calc(var(--pw,180px)*0.012)}
+/* Circles: 190/1170=0.162 square */
+.lo-widget-circle{width:calc(var(--pw,180px)*0.162);height:calc(var(--pw,180px)*0.162);background:rgba(255,255,255,0.18);backdrop-filter:blur(10px);border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;flex-direction:row;align-items:center;justify-content:center;gap:calc(var(--pw,180px)*0.018);flex-shrink:0}
+.lo-wc-icon{font-size:calc(var(--pw,180px)*0.065)}
+.lo-wc-label{font-size:calc(var(--pw,180px)*0.038);color:rgba(255,255,255,0.85);font-family:-apple-system,system-ui,sans-serif;font-weight:600}
+.lo-spacer{flex:1}
+/* Buttons: 152/1170=0.130 dia, centre from edge 140/1170=0.120 → padding=0.120-0.065=0.055, bottom centre 202/1170=0.173 from bottom */
+.lo-bottom{width:100%;display:flex;justify-content:space-between;align-items:center;padding:0 calc(var(--pw,180px)*0.055) calc(var(--pw,180px)*0.068)}
+.lo-btn{width:calc(var(--pw,180px)*0.13);height:calc(var(--pw,180px)*0.13);background:rgba(255,255,255,0.22);backdrop-filter:blur(12px);border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,0.18)}
+.lo-btn svg{width:calc(var(--pw,180px)*0.065);height:calc(var(--pw,180px)*0.065)}
+/* Home bar: 390/1170=0.333 wide, ~5px thin, 34/1170=0.029 from bottom */
+.lo-homebar{width:calc(var(--pw,180px)*0.333);height:max(calc(var(--pw,180px)*0.006),1.5px);background:rgba(255,255,255,0.5);border-radius:999px;margin-bottom:calc(var(--pw,180px)*0.029);flex-shrink:0}
+/* lo-text：date + clock wrapper */
+.lo-text{display:flex;flex-direction:column;align-items:center}
+
+
+
+/* 通用解析度：完全不顯示任何覆蓋 */
+.lock-overlay[data-notch="clear"]{display:none}
+
+/* ── notch (iPhone 13 / 14)：寬瀏海從頂端延伸 ── */
+/* 寬 148pt/390pt=0.379，高 34pt/390pt=0.087，底角 14pt/390pt=0.036 */
+.lock-overlay[data-notch="notch"] .lo-island{
+  width:calc(var(--pw,180px)*0.379);height:calc(var(--pw,180px)*0.087);
+  border-radius:0 0 calc(var(--pw,180px)*0.046) calc(var(--pw,180px)*0.046);
+  margin-top:0;
+}
+/* ── none (iPhone SE 3 / 通用)：無缺口，無 Home 指示條 ── */
+.lock-overlay[data-notch="none"] .lo-island{display:none}
+.lock-overlay[data-notch="none"] .lo-date{margin-top:calc(var(--pw,180px)*0.13)}
+.lock-overlay[data-notch="none"] .lo-homebar{display:none}
+/* ── hole (Samsung / Pixel)：中心打孔 ── */
+.lock-overlay[data-notch="hole"] .lo-island{
+  width:calc(var(--pw,180px)*0.052);height:calc(var(--pw,180px)*0.052);
+  border-radius:50%;margin-top:calc(var(--pw,180px)*0.025);
+}
+/* Android：日期在時鐘上方，間距不同 */
+.lock-overlay[data-notch="hole"] .lo-date{
+  margin-top:calc(var(--pw,180px)*0.12);
+  font-size:calc(var(--pw,180px)*0.052);
+}
+/* Android：時鐘更粗更大（One UI 風格） */
+.lock-overlay[data-notch="hole"] .lo-clock{
+  font-size:calc(var(--pw,180px)*0.32);
+  font-weight:300;letter-spacing:-0.04em;margin-top:0;
+}
+/* 隱藏 iPhone 專屬元素 */
+.lock-overlay[data-notch="hole"] .lo-widgets{display:none}
+.lock-overlay[data-notch="hole"] .lo-bottom{display:none}
+.lock-overlay[data-notch="hole"] .lo-homebar{display:none}
 
 /* Image controls */
 .img-controls{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:rgba(28,24,20,0.92);border:1px solid var(--border2);border-radius:10px;padding:8px 10px;display:none;flex-direction:column;gap:6px;backdrop-filter:blur(8px);z-index:20;min-width:190px}
@@ -69,14 +193,37 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
   .preview-area{flex:1;min-height:0}
   .m-drawer{display:flex!important}
   .desk-dl{display:none}
+  /* 抽屜 mobile 額外放大 */
+  .sec-label{font-size:0.8rem}
+  .srow label,.row label,.cir label{font-size:0.9rem;min-width:48px}
+  .sval{font-size:0.9rem}
+  .srow{margin-bottom:16px}
+  .srow input[type=range]{height:6px}
+  .btn{font-size:0.9rem;min-height:44px}
+  .stab{font-size:0.9rem;min-height:44px}
+  .toggle-row{padding:11px 0}
+  .toggle-row span{font-size:0.96rem}
+  select{font-size:0.95rem;padding:12px 32px 12px 13px}
+  textarea{font-size:1.05rem}
+  .sw{width:36px;height:36px}
+  .tcswatch{width:36px;height:36px}
+  input[type=color]{width:40px;height:40px}
+  .sec{margin-bottom:26px}
+  .exp-btn{font-size:1.05rem;padding:16px}
+  .share-btn{font-size:0.95rem;padding:15px}
+  .abtn{height:44px;font-size:1.1rem}
+  .dice-btn{width:44px;height:44px;font-size:1.2rem}
+  .hist-star,.hist-del{width:30px;height:30px;font-size:0.9rem}
+  .ftrigger{padding:12px 32px 12px 13px}
+  .fopt{padding:14px 13px}
 }
-.m-drawer{display:none;flex-direction:column;background:var(--bg2);border-top:1px solid var(--border);z-index:100;transition:height 0.3s cubic-bezier(0.32,0.72,0,1);height:50px;flex-shrink:0}
-.m-handle{height:50px;min-height:50px;flex-shrink:0;display:flex;align-items:flex-end;justify-content:center;cursor:pointer;position:relative}
+.m-drawer{display:none;flex-direction:column;background:var(--bg2);border-top:1px solid var(--border);z-index:100;transition:height 0.3s cubic-bezier(0.32,0.72,0,1);height:62px;flex-shrink:0}
+.m-handle{height:62px;min-height:62px;flex-shrink:0;display:flex;align-items:flex-end;justify-content:center;cursor:pointer;position:relative}
 .m-handle-bar{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:3px;background:var(--border2);border-radius:2px;transition:opacity 0.2s}
 .m-drawer.open .m-handle-bar{opacity:0}
 .m-tab-nav{display:flex;width:100%;border-top:1px solid var(--border);position:absolute;bottom:0;left:0;right:0}
-.m-tab-btn{flex:1;padding:8px 2px;background:none;border:none;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.05em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;transition:color 0.15s;border-top:2px solid transparent}
-.m-tab-btn .ico{font-size:0.9rem}
+.m-tab-btn{flex:1;padding:10px 2px;background:none;border:none;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.04em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;transition:color 0.15s;border-top:2px solid transparent}
+.m-tab-btn .ico{font-size:1.35rem}
 .m-tab-btn:hover{color:var(--text2)}
 .m-tab-btn.active{color:var(--accent);border-top-color:var(--accent)}
 .m-body{flex:1;overflow:hidden;min-height:0;display:flex;flex-direction:column}
@@ -86,74 +233,94 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .m-drawer.open{height:var(--drawer-h,340px)}
 
 /* ══ TOAST ══ */
-.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-70px);background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:10px 18px;font-size:0.8rem;color:var(--text2);letter-spacing:0.04em;z-index:9999;transition:transform 0.26s ease;white-space:nowrap;pointer-events:none;box-shadow:0 8px 28px rgba(0,0,0,0.5)}
+.toast{position:fixed;top:18px;left:50%;transform:translateX(-50%) translateY(-70px);background:#fff;border:1px solid var(--border2);border-radius:10px;padding:10px 18px;font-size:0.8rem;color:var(--text);letter-spacing:0.04em;z-index:9999;transition:transform 0.26s ease;white-space:nowrap;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.12)}
 .toast.show{transform:translateX(-50%) translateY(0)}
 .toast.warn{border-color:var(--accent);color:var(--accent)}
 .toast.err{border-color:var(--danger);color:var(--danger)}
 
 /* ══ FORM ══ */
-.sec{margin-bottom:18px}
-.sec-label{font-size:0.65rem;letter-spacing:0.16em;color:var(--accent);text-transform:uppercase;margin-bottom:10px}
-textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.7;padding:11px;resize:vertical;min-height:76px;outline:none;transition:border-color 0.2s}
+.sec{margin-bottom:22px}
+.sec-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.sec-label{font-size:0.72rem;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;font-weight:600}
+.sec>.sec-label{margin-bottom:10px}
+.sec-reset{font-size:0.65rem;color:var(--text3);background:none;border:1px solid var(--border);border-radius:6px;padding:3px 9px;cursor:pointer;font-family:'DM Mono',monospace;letter-spacing:0.04em;transition:all 0.12s;white-space:nowrap}
+.sec-reset:hover{color:var(--accent);border-color:var(--accent)}
+textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.7;padding:12px;resize:none;min-height:80px;overflow:hidden;outline:none;transition:border-color 0.2s}
 textarea:focus{border-color:var(--accent)}
-.char-count{font-size:0.62rem;color:var(--text3);text-align:right;margin-top:3px}
+.char-count{font-size:0.72rem;color:var(--text3);text-align:right;margin-top:4px}
 .char-count.near{color:var(--accent)}
 .char-count.over{color:var(--danger)}
-.row{display:flex;gap:7px;margin-bottom:9px;align-items:center}
-.row label{font-size:0.68rem;color:var(--text3);white-space:nowrap;min-width:40px}
-select{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Mono',monospace;font-size:0.78rem;padding:8px 28px 8px 10px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a7a68'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center}
+.row{display:flex;gap:8px;margin-bottom:10px;align-items:center}
+.row label{font-size:0.78rem;color:var(--text3);white-space:nowrap;min-width:44px}
+select{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'DM Mono',monospace;font-size:0.84rem;padding:10px 30px 10px 12px;outline:none;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a7a68'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center}
 select option{background:var(--bg3)}
-.srow{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.srow label{font-size:0.68rem;color:var(--text3);min-width:40px}
-.srow input[type=range]{flex:1;height:4px;border-radius:2px;background:var(--bg4);border:none;outline:none;accent-color:var(--accent);cursor:pointer;padding:0}
-.sval{font-size:0.72rem;color:var(--accent);min-width:32px;text-align:right}
-.btngrp{display:flex;gap:5px;margin-bottom:9px}
-.btn{background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.72rem;padding:7px 10px;cursor:pointer;letter-spacing:0.04em;transition:all 0.12s;flex:1;text-align:center;white-space:nowrap}
+.srow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.srow label{font-size:0.78rem;color:var(--text3);min-width:44px}
+.srow input[type=range]{flex:1;height:5px;border-radius:3px;background:var(--bg4);border:none;outline:none;accent-color:var(--accent);cursor:pointer;padding:0}
+.sval{font-size:0.8rem;color:var(--accent);min-width:36px;text-align:right}
+.btngrp{display:flex;gap:6px;margin-bottom:10px}
+.btn{background:var(--bg3);border:1px solid var(--border);border-radius:9px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.82rem;padding:10px 12px;cursor:pointer;letter-spacing:0.03em;transition:all 0.12s;flex:1;text-align:center;white-space:nowrap;min-height:40px}
 .btn:hover{border-color:var(--border2);color:var(--text2)}
-.btn.active{background:var(--accent);color:#111;border-color:var(--accent)}
+.btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.btn-disabled{opacity:0.3;cursor:not-allowed;pointer-events:none}
 .btn.danger{border-color:var(--border);color:var(--text3)}
 .btn.danger:hover{border-color:var(--danger);color:var(--danger)}
-.stabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:11px}
-.stab{background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.72rem;padding:6px 10px;cursor:pointer;transition:all 0.12s}
+.stabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.stab{background:var(--bg3);border:1px solid var(--border);border-radius:9px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.82rem;padding:8px 13px;cursor:pointer;transition:all 0.12s;min-height:36px;display:flex;align-items:center}
 .stab:hover{border-color:var(--border2);color:var(--text2)}
 .stab.active{background:var(--bg4);color:var(--accent);border-color:var(--accent)}
-.swatch-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:7px}
-.sw{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform 0.12s,border-color 0.12s;flex-shrink:0}
-.sw:hover{transform:scale(1.18)}
-.sw.active{border-color:var(--accent);transform:scale(1.15)}
-.cir{display:flex;align-items:center;gap:8px;margin:6px 0}
-.cir label{font-size:0.68rem;color:var(--text3);min-width:28px}
-input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-radius:6px;background:none;cursor:pointer;padding:2px}
-.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:7px 0}
-.toggle-row span{font-size:0.78rem;color:var(--text2)}
-.tog{width:38px;height:22px;background:var(--bg4);border-radius:11px;position:relative;cursor:pointer;transition:background 0.2s;flex-shrink:0;border:1px solid var(--border)}
+.swatch-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.sw{width:32px;height:32px;border-radius:50%;border:2px solid transparent;box-shadow:inset 0 0 0 1.5px rgba(0,0,0,0.13);cursor:pointer;transition:transform 0.12s,border-color 0.12s;flex-shrink:0}
+.sw:hover{transform:scale(1.15)}
+.sw.active{border-color:var(--accent);transform:scale(1.12)}
+.cir{display:flex;align-items:center;gap:10px;margin:12px 0 8px}
+.cir label{font-size:0.78rem;color:var(--text3);min-width:32px}
+input[type=color]{width:36px;height:36px;border:1px solid var(--border);border-radius:8px;background:none;cursor:pointer;padding:2px}
+.toggle-row{display:flex;align-items:center;justify-content:space-between;padding:9px 0}
+.toggle-row span{font-size:0.88rem;color:var(--text2)}
+.tog{width:44px;height:26px;background:var(--bg4);border-radius:13px;position:relative;cursor:pointer;transition:background 0.2s;flex-shrink:0;border:1px solid var(--border)}
 .tog.on{background:var(--accent);border-color:var(--accent)}
-.tog::after{content:'';position:absolute;width:14px;height:14px;background:#fff;border-radius:50%;top:3px;left:3px;transition:left 0.2s}
-.tog.on::after{left:19px}
-.align-btns{display:flex;gap:5px;flex:1}
-.abtn{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:7px;color:var(--text3);font-size:0.9rem;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.12s}
+.tog::after{content:'';position:absolute;width:18px;height:18px;background:#fff;border-radius:50%;top:3px;left:3px;transition:left 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+.tog.on::after{left:23px}
+.align-btns{display:flex;gap:6px;flex:1}
+.abtn{flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:1rem;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.12s}
 .abtn:hover{border-color:var(--border2);color:var(--text2)}
 .abtn.active{background:var(--bg4);color:var(--accent);border-color:var(--accent)}
-.upload-zone{border:1.5px dashed var(--border2);border-radius:10px;padding:18px;text-align:center;cursor:pointer;transition:all 0.2s}
+.upload-zone{border:1.5px dashed var(--border2);border-radius:10px;padding:20px;text-align:center;cursor:pointer;transition:all 0.2s}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--accent);background:rgba(255,255,255,0.04)}
-.upload-zone .uico{font-size:1.5rem;display:block;margin-bottom:5px}
-.upload-zone p{font-size:0.68rem;color:var(--text3);margin-top:3px}
-.compress-warn{background:rgba(255,255,255,0.05);border:1px solid var(--border2);border-radius:8px;padding:9px 11px;font-size:0.7rem;color:var(--text2);display:none;margin-bottom:9px;line-height:1.5}
+.upload-zone .uico{font-size:1.8rem;display:block;margin-bottom:6px}
+.upload-zone p{font-size:0.8rem;color:var(--text3);margin-top:4px}
+.compress-warn{background:rgba(255,255,255,0.05);border:1px solid var(--border2);border-radius:8px;padding:10px 12px;font-size:0.8rem;color:var(--text2);display:none;margin-bottom:10px;line-height:1.5}
 .compress-warn.show{display:block}
 
 /* ══ DICE + COLOR HISTORY ══ */
-.dice-row{display:flex;align-items:center;gap:8px;margin:7px 0}
-.dice-btn{background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:0.95rem;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.15s;flex-shrink:0}
+.dice-row{display:flex;align-items:center;gap:8px;margin:12px 0 8px}
+.dice-btn{background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text3);font-size:1.1rem;width:38px;height:38px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.15s;flex-shrink:0}
 .dice-btn:hover{border-color:var(--accent);color:var(--accent);transform:rotate(30deg) scale(1.1)}
-.chist-label{font-size:0.65rem;color:var(--text3);letter-spacing:0.08em}
-.chist-scroll{display:flex;gap:5px;overflow-x:auto;padding-bottom:4px;margin-top:5px;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
-.chit{flex-shrink:0;width:32px;height:32px;border-radius:7px;border:2px solid transparent;cursor:pointer;transition:all 0.12s;position:relative}
+.chist-label{font-size:0.75rem;color:var(--text3);letter-spacing:0.06em}
+.chist-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px;margin-bottom:2px}
+.chist-clr-btn{font-size:0.62rem;color:var(--text3);background:none;border:1px solid var(--border);border-radius:5px;padding:2px 8px;cursor:pointer;font-family:'DM Mono',monospace;transition:all 0.12s;white-space:nowrap}
+.chist-clr-btn:hover{color:var(--danger);border-color:var(--danger)}
+.chist-scroll{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px;margin-bottom:4px}
+/* ══ PAIR SWATCHES ══ */
+.pair-grid{display:flex;flex-wrap:wrap;gap:10px;padding:4px 0;min-height:20px}
+.pair-empty{font-size:0.72rem;color:var(--text3)}
+.pair-item{display:flex;flex-direction:column;align-items:center;gap:4px}
+.pair-swatch{width:48px;height:40px;border-radius:8px;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform 0.12s,box-shadow 0.12s;flex-shrink:0}
+.pair-swatch:hover{transform:scale(1.08);box-shadow:0 3px 10px rgba(0,0,0,0.18)}
+.pair-char{font-size:1.15rem;font-weight:700;line-height:1;pointer-events:none;user-select:none}
+.pair-actions{display:flex;gap:4px}
+.pair-star{background:none;border:none;cursor:pointer;font-size:0.75rem;padding:0;color:var(--text3);line-height:1;transition:color 0.12s}
+.pair-star.on{color:#c8a020}
+.pair-del{background:none;border:none;cursor:pointer;font-size:0.68rem;padding:0;color:var(--text3);line-height:1;transition:color 0.12s}
+.pair-del:hover{color:var(--danger)}
+.chit{flex-shrink:0;width:36px;height:36px;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all 0.12s;position:relative}
 .chit:hover{border-color:var(--border2);transform:scale(1.08)}
 .chit.active-c{border-color:var(--accent)}
 .chit.starred{border-color:var(--accent-dim)}
-.chit-star{position:absolute;top:-5px;right:-5px;font-size:9px;color:var(--accent);cursor:pointer;background:var(--bg2);border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);opacity:0;transition:opacity 0.12s}
+.chit-star{position:absolute;top:-6px;right:-6px;font-size:10px;color:var(--accent);cursor:pointer;background:var(--bg2);border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);opacity:0;transition:opacity 0.12s}
 .chit:hover .chit-star,.chit.starred .chit-star{opacity:1}
-.chit-del{position:absolute;top:-5px;left:-5px;font-size:9px;color:var(--danger);cursor:pointer;background:var(--bg2);border-radius:50%;width:14px;height:14px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);opacity:0;transition:opacity 0.12s}
+.chit-del{position:absolute;top:-6px;left:-6px;font-size:10px;color:var(--danger);cursor:pointer;background:var(--bg2);border-radius:50%;width:17px;height:17px;display:flex;align-items:center;justify-content:center;border:1px solid var(--border);opacity:0;transition:opacity 0.12s}
 .chit:hover .chit-del{opacity:1}
 
 /* ══ FONT DROPDOWN ══ */
@@ -165,21 +332,21 @@ input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-r
 .ftrigger-desc{font-size:0.6rem;color:var(--text3);font-family:'DM Mono',monospace}
 .ftrigger-arrow{position:absolute;right:10px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:0.7rem;transition:transform 0.18s}
 .ftrigger.open .ftrigger-arrow{transform:translateY(-50%) rotate(180deg)}
-.fmenu{position:absolute;left:0;right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:10px;overflow-y:auto;max-height:280px;z-index:600;box-shadow:0 12px 40px rgba(0,0,0,0.6);display:none;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.fmenu{position:absolute;left:0;right:0;background:var(--bg2);border:1px solid var(--border2);border-radius:10px;overflow-y:auto;max-height:280px;z-index:600;box-shadow:0 8px 24px rgba(0,0,0,0.12);display:none;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
 .fmenu.open{display:block;animation:fdrop 0.16s ease}
 .fmenu.up{bottom:calc(100% + 5px)}
 .fmenu.dn{top:calc(100% + 5px)}
 @keyframes fdrop{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
-.fgroup{padding:7px 11px 3px;font-size:0.55rem;color:var(--accent-dim);letter-spacing:0.18em;text-transform:uppercase;font-family:'DM Mono',monospace}
-.fopt{padding:10px 11px;cursor:pointer;border-bottom:1px solid var(--border);transition:background 0.12s;display:flex;flex-direction:column;gap:2px}
+.fgroup{padding:8px 13px 4px;font-size:0.65rem;color:var(--accent-dim);letter-spacing:0.16em;text-transform:uppercase;font-family:'DM Mono',monospace}
+.fopt{padding:12px 13px;cursor:pointer;border-bottom:1px solid var(--border);transition:background 0.12s;display:flex;flex-direction:column;gap:3px}
 .fopt:last-child{border-bottom:none}
 .fopt:hover{background:var(--bg3)}
 .fopt.active{background:var(--bg4)}
-.fopt-name{font-size:0.95rem;color:var(--text);line-height:1.2}
-.fopt-desc{font-size:0.58rem;color:var(--text3);font-family:'DM Mono',monospace}
+.fopt-name{font-size:1rem;color:var(--text);line-height:1.2}
+.fopt-desc{font-size:0.72rem;color:var(--text3);font-family:'DM Mono',monospace}
 
 /* ══ TEXT COLOR ══ */
-.tcswatch{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:transform 0.12s,border-color 0.12s;flex-shrink:0}
+.tcswatch{width:32px;height:32px;border-radius:50%;border:2px solid transparent;box-shadow:inset 0 0 0 1.5px rgba(0,0,0,0.13);cursor:pointer;transition:transform 0.12s,border-color 0.12s;flex-shrink:0}
 .tcswatch:hover{transform:scale(1.18)}
 .tcswatch.active{border-color:var(--accent);transform:scale(1.14)}
 
@@ -188,34 +355,32 @@ input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-r
 .size-item{display:flex;align-items:center;justify-content:space-between;background:var(--bg3);border:1px solid var(--border);border-radius:9px;padding:10px 13px;cursor:pointer;transition:all 0.12s}
 .size-item:hover{border-color:var(--border2)}
 .size-item.active{border-color:var(--accent);background:var(--bg4)}
-.size-item-name{font-size:0.8rem;color:var(--text2)}
+.size-item-name{font-size:0.88rem;color:var(--text2)}
 .size-item.active .size-item-name{color:var(--accent)}
-.size-item-res{font-size:0.62rem;color:var(--text3)}
+.size-item-res{font-size:0.75rem;color:var(--text3)}
 
 /* ══ HISTORY ══ */
-.hist-grid{display:grid;grid-template-columns:repeat(1,1fr);gap:7px;min-height:100%}
+.hist-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;align-content:start}
 .hist-empty-wrap{display:flex;align-items:center;justify-content:center;height:100%;min-height:200px}
-.hist-empty{text-align:center;color:var(--text3);font-size:0.78rem;line-height:2}
-.hist-item{background:var(--bg3);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:border-color 0.15s,transform 0.12s;position:relative;display:flex;align-items:stretch}
-.hist-item:hover{border-color:var(--border2);transform:scale(1.01)}
-.hist-thumb{width:52px;flex-shrink:0;display:block;object-fit:cover}
-.hist-info{padding:8px 10px;flex:1;display:flex;flex-direction:column;justify-content:center;border-left:1px solid var(--border)}
-.hist-text{font-size:0.68rem;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:'Noto Serif TC',serif}
-.hist-time{font-size:0.58rem;color:var(--text3);margin-top:2px}
-.hist-actions{display:flex;gap:5px;margin-top:6px}
-.hist-star{background:none;border:none;color:var(--text3);cursor:pointer;font-size:0.82rem;padding:0;transition:color 0.12s;line-height:1}
-.hist-star:hover,.hist-star.on{color:var(--accent)}
-.hist-del{background:none;border:none;color:var(--text3);cursor:pointer;font-size:0.78rem;padding:0;transition:color 0.12s;line-height:1}
-.hist-del:hover{color:var(--danger)}
-.hist-comp{font-size:0.55rem;color:var(--text3);margin-top:2px}
-.hist-toolbar{display:flex;justify-content:flex-end;margin-bottom:10px}
-.hist-clear-btn{background:none;border:1px solid var(--border);border-radius:7px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.68rem;padding:5px 10px;cursor:pointer;transition:all 0.12s}
+.hist-empty{text-align:center;color:var(--text3);font-size:0.88rem;line-height:2}
+.hist-item{background:var(--bg3);border:1px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color 0.15s,transform 0.12s;position:relative}
+.hist-item:hover{border-color:var(--border2);transform:scale(1.02)}
+.hist-thumb{width:100%;display:block;aspect-ratio:9/19;object-fit:cover}
+.hist-info{padding:7px 8px;border-top:1px solid var(--border)}
+.hist-time{font-size:0.72rem;color:var(--text3);text-align:center}
+.hist-star{position:absolute;top:6px;right:6px;background:rgba(0,0,0,0.5);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.82rem;cursor:pointer;border:none;color:#fff;transition:all 0.12s;pointer-events:auto;line-height:1}
+.hist-star:hover,.hist-star.on{background:rgba(0,0,0,0.75)}
+.hist-star.on{color:#ffe066}
+.hist-del{position:absolute;top:6px;left:6px;background:rgba(0,0,0,0.5);border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:0.8rem;cursor:pointer;border:none;color:#fff;transition:all 0.12s;pointer-events:auto;line-height:1}
+.hist-del:hover{background:rgba(180,30,30,0.8)}
+.hist-toolbar{display:flex;justify-content:flex-end;margin-bottom:12px}
+.hist-clear-btn{background:none;border:1px solid var(--border);border-radius:8px;color:var(--text3);font-family:'DM Mono',monospace;font-size:0.78rem;padding:7px 12px;cursor:pointer;transition:all 0.12s}
 .hist-clear-btn:hover{border-color:var(--danger);color:var(--danger)}
 
 /* ══ EXPORT ══ */
-.exp-btn{width:100%;background:var(--accent);border:none;border-radius:10px;color:#111;font-family:'DM Mono',monospace;font-size:0.85rem;font-weight:700;padding:13px;cursor:pointer;transition:opacity 0.15s;margin-bottom:8px;letter-spacing:0.06em}
+.exp-btn{width:100%;background:var(--accent);border:none;border-radius:12px;color:#fff;font-family:'DM Mono',monospace;font-size:0.95rem;font-weight:700;padding:15px;cursor:pointer;transition:opacity 0.15s;margin-bottom:10px;letter-spacing:0.05em}
 .exp-btn:hover{opacity:0.88}
-.share-btn{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:10px;color:var(--text2);font-family:'DM Mono',monospace;font-size:0.8rem;padding:12px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.share-btn{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:12px;color:var(--text2);font-family:'DM Mono',monospace;font-size:0.88rem;padding:13px 14px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .share-btn:hover{border-color:var(--border2);color:var(--text)}
 </style>
 </head>
@@ -223,7 +388,7 @@ input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-r
 <div class="app">
   <div class="sidebar">
     <div class="sidebar-header">
-      <div class="logo">壁紙工作室<span class="logo-sub">WALLPAPER STUDIO</span></div>
+      <div class="logo">壁紙工作室<span class="logo-sub">WALLPAPER STUDIO</span><span class="logo-sub" style="margin-top:5px;letter-spacing:0.1em">© 2026 <a href="https://github.com/WenHsi" target="_blank" rel="noopener" class="credit-link">wenhsi</a></span></div>
     </div>
     <div class="d-tab-nav" id="dNav"></div>
     <div class="d-panels" id="dPanels"></div>
@@ -240,6 +405,42 @@ input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-r
       <div class="phone-frame" id="phoneFrame">
         <div class="phone-notch" id="phoneNotch"></div>
         <canvas id="previewCanvas"></canvas>
+        <div class="lock-overlay" id="lockOverlay">
+          <div class="lo-island" id="loIsland"></div>
+          <div class="lo-text">
+            <div class="lo-date" id="loDate">週日 ☁ 6月8日</div>
+            <div class="lo-clock" id="loClock">9:41</div>
+          </div>
+          <div class="lo-widgets">
+            <div class="lo-widget-rect">
+              <div class="lo-widget-rect-title">📅 行事曆</div>
+              <div class="lo-widget-rect-val">今日</div>
+              <div class="lo-widget-rect-sub">沒有更多行程</div>
+            </div>
+            <div class="lo-widget-circle">
+              <div class="lo-wc-icon">⛅</div>
+              <div class="lo-wc-label">25°</div>
+            </div>
+            <div class="lo-widget-circle">
+              <div class="lo-wc-icon">🎵</div>
+              <div class="lo-wc-label">音樂</div>
+            </div>
+          </div>
+          <div class="lo-spacer"></div>
+          <div class="lo-bottom">
+            <div class="lo-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2h8l1.5 5H6.5L8 2z"/><rect x="6" y="7" width="12" height="10" rx="2"/><line x1="12" y1="10" x2="12" y2="14"/><line x1="10" y1="12" x2="14" y2="12"/>
+              </svg>
+            </div>
+            <div class="lo-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="lo-homebar"></div>
+        </div>
         <div class="img-controls" id="imgControls">
           <div class="icr">
             <div class="icb wide" id="imgFit">智能符合</div>
@@ -268,6 +469,9 @@ input[type=color]{width:30px;height:30px;border:1px solid var(--border);border-r
     </div>
     <div class="m-body">
       <div class="m-panels" id="mPanels"></div>
+      <div style="text-align:center;padding:6px 0 10px;font-family:'DM Mono',monospace;font-size:0.55rem;color:var(--text3);letter-spacing:0.12em;flex-shrink:0">
+        © 2026 <a href="https://github.com/WenHsi" target="_blank" rel="noopener" class="credit-link">wenhsi</a>
+      </div>
     </div>
   </div>
 </div>
@@ -283,47 +487,55 @@ const SW=window.screen.width,SH=window.screen.height;
 const REAL_W=SW*DPR,REAL_H=SH*DPR;
 const MAX_CHARS=150;
 const MODELS=[
-  {name:'此裝置',w:REAL_W,h:REAL_H},
-  {name:'iPhone SE 3',w:750,h:1334},
-  {name:'iPhone 13/14',w:1170,h:2532},
-  {name:'iPhone 13Pro/14Pro/15/16',w:1179,h:2556},
-  {name:'iPhone 15Pro/16Pro',w:1206,h:2622},
-  {name:'Samsung S24',w:1080,h:2340},
-  {name:'Pixel 8',w:1080,h:2400},
-  {name:'通用 1080p',w:1080,h:1920},
+  {name:'此裝置',w:REAL_W,h:REAL_H,notch:'auto'},
+  {name:'iPhone SE 3',w:750,h:1334,notch:'none'},
+  {name:'iPhone 13 / 14',w:1170,h:2532,notch:'notch'},
+  {name:'iPhone 13 Pro Max / 14 Plus',w:1284,h:2778,notch:'notch'},
+  {name:'iPhone 14 Pro / 15 / 15 Pro / 16',w:1179,h:2556,notch:'island'},
+  {name:'iPhone 15+ / 15 Pro Max / 16 Plus',w:1290,h:2796,notch:'island'},
+  {name:'iPhone 16 Pro',w:1206,h:2622,notch:'island'},
+  {name:'iPhone 16 Pro Max',w:1320,h:2868,notch:'island'},
+  {name:'Samsung S24 / S24+ / S25',w:1080,h:2340,notch:'hole'},
+  {name:'Samsung S24 Ultra / S25 Ultra',w:1440,h:3088,notch:'hole'},
+  {name:'Pixel 8 / 9',w:1080,h:2400,notch:'hole'},
+  {name:'通用 1080p',w:1080,h:1920,notch:'clear'},
 ];
-const WARM_DARK=['#1c1814','#1a1510','#1e1a12','#151210','#1a1620','#121820','#14181a','#1c1418'];
-const WARM_LIGHT=['#ede5d8'];
-const GRAD_PRESETS=[['#1c1814','#3d2b1a'],['#0f1a20','#1a3040'],['#1a0f20','#2d1a38'],['#101818','#1a3028'],['#201010','#381a1a'],['#f5efe0','#e0d4b8'],['#e8f0f5','#d0e0ec'],['#f5e8e0','#ecddd0']];
+const WARM_DARK=['#121212','#14181a','#121820'];
+const WARM_LIGHT=['#f0eae0'];
+const GRAD_PRESETS=[['#f0eae0','#d4c8b8'],['#1c1814','#3d2b1a'],['#0f1a20','#1a3040'],['#1a0f20','#2d1a38'],['#101818','#1a3028'],['#201010','#381a1a'],['#f5efe0','#e0d4b8'],['#e8f0f5','#d0e0ec'],['#f5e8e0','#ecddd0']];
 const MESH_PRESETS=[['#1c1814','#3d2b1a','#2d1a0f','#141010'],['#0f1a28','#1a3040','#0f2830','#081418'],['#d4a96a','#c89060','#e8c89a','#b87840'],['#f5efe0','#e8d8c0','#f0e0c8','#ddd0b8'],['#667eea','#764ba2','#f093fb','#f5576c'],['#4facfe','#00f2fe','#43e97b','#38f9d7']];
-const TEXT_COLORS=[{h:'#f2ead8',n:'暖白'},{h:'#ffffff',n:'純白'},{h:'#1c1814',n:'深黑'},{h:'#000000',n:'純黑'},{h:'#d4a96a',n:'暖金'},{h:'#a8d4a9',n:'淡綠'},{h:'#a9c4d4',n:'淡藍'}];
+const TEXT_COLORS=[{h:'#1c1814',n:'深黑'},{h:'#f2ead8',n:'暖白'},{h:'#000000',n:'純黑'},{h:'#ffffff',n:'純白'},{h:'#d4a96a',n:'暖金'}];
 const FONTS=[
   {group:'中文',items:[
-    {v:"'Noto Serif TC',serif",n:'思源宋體',d:'優雅 · 適合勵志句'},
-    {v:"'Noto Sans TC',sans-serif",n:'思源黑體',d:'現代 · 清晰易讀'},
-    {v:"'Jf Open Huninn',sans-serif",n:'粉圓體',d:'圓潤 · 活潑可愛'},
-    {v:"'DM Serif Display',serif",n:'DM Serif',d:'俐落 · 現代襯線'},
+    {v:"'LXGW WenKai TC',serif",n:'霞鶩文楷',d:'手寫 · 溫柔書寫感',w:['300','400','700']},
+    {v:"'Noto Sans TC',sans-serif",n:'思源黑體',d:'現代 · 清晰易讀',w:['300','400','700']},
+    {v:"'Noto Serif TC',serif",n:'思源宋體',d:'優雅 · 適合勵志句',w:['300','400','700']},
+    {v:"'Zen Maru Gothic',sans-serif",n:'Zen 圓體',d:'圓潤 · 柔和友善',w:['300','400','700']},
+    {v:"'DotGothic16',monospace",n:'方塊體',d:'像素 · 可愛方塊感',w:['400']},
+    {v:"'M PLUS Rounded 1c',sans-serif",n:'粉圓體',d:'圓潤 · 活潑可愛',w:['300','400','700']},
+    {v:"'DM Serif Display',serif",n:'DM Serif',d:'俐落 · 現代襯線',w:['400']},
   ]},
   {group:'English',items:[
-    {v:"'Playfair Display',serif",n:'Playfair Display',d:'高雅 · 文藝感強'},
-    {v:"'Cormorant Garamond',serif",n:'Cormorant Garamond',d:'古典 · 細緻優美'},
-    {v:"'Lora',serif",n:'Lora',d:'溫潤 · 閱讀舒適'},
-    {v:"'Raleway',sans-serif",n:'Raleway',d:'現代 · 幾何簡潔'},
-    {v:"'Josefin Sans',sans-serif",n:'Josefin Sans',d:'俐落 · 幾何無襯線'},
-    {v:"'Cinzel',serif",n:'Cinzel',d:'莊嚴 · 羅馬風格'},
-    {v:"'DM Mono',monospace",n:'DM Mono',d:'等寬 · 程式美學'},
-    {v:"'Courier New',monospace",n:'Courier New',d:'復古 · 打字機感'},
+    {v:"'Playfair Display',serif",n:'Playfair Display',d:'高雅 · 文藝感強',w:['400','700']},
+    {v:"'Cormorant Garamond',serif",n:'Cormorant Garamond',d:'古典 · 細緻優美',w:['300','400','700']},
+    {v:"'Lora',serif",n:'Lora',d:'溫潤 · 閱讀舒適',w:['400','700']},
+    {v:"'Raleway',sans-serif",n:'Raleway',d:'現代 · 幾何簡潔',w:['300','400','700']},
+    {v:"'Josefin Sans',sans-serif",n:'Josefin Sans',d:'俐落 · 幾何無襯線',w:['300','400','700']},
+    {v:"'Cinzel',serif",n:'Cinzel',d:'莊嚴 · 羅馬風格',w:['400','700']},
+    {v:"'DM Mono',monospace",n:'DM Mono',d:'等寬 · 程式美學',w:['400']},
+    {v:"'Courier New',monospace",n:'Courier New',d:'復古 · 打字機感',w:['400','700']},
   ]},
 ];
 const ALL_FONTS=FONTS.flatMap(g=>g.items);
+function curFontWeights(){return(ALL_FONTS.find(f=>f.v===S.font)||{w:['300','400','700']}).w;}
 
 // ══ STATE ══
 const DS=()=>({
   text:'每一天，都是重新開始的機會。',
-  font:"'Noto Serif TC',serif",fw:'400',fs:32,
-  tc:'#f2ead8',to:95,lh:1.65,ta:'center',
-  shOn:true,shAmt:15,bgOn:false,bgCol:'#000000',bgOp:40,
-  bgs:'solid',sc:'#1c1814',
+  font:"'LXGW WenKai TC',serif",fw:'400',fs:22,
+  tc:'#1c1814',to:95,lh:2.0,ls:1,ta:'center',
+  shOn:false,shAmt:15,bgOn:false,bgCol:'#000000',bgOp:40,
+  bgs:'solid',sc:'#f0eae0',
   g1:'#1c1814',g2:'#3d2b1a',gd:'to bottom',
   mc:MESH_PRESETS[0].slice(),
   nc:'#1c1814',na:20,
@@ -334,7 +546,7 @@ const DS=()=>({
 let S=DS();
 let photoOrig=null,photoComp=null;
 let undoStack=[],redoStack=[],undoOn=true;
-let cHist={solid:[],gradient:[],mesh:[],noise:[]};
+let cHist={solid:[],gradient:[],mesh:[],noise:[],text:[]};
 let hRecs=[];
 let PW=180,PH=390;
 // Noise cache
@@ -342,6 +554,49 @@ let noiseCache=null,noiseCacheKey='';
 
 // ══ SELECTED MODEL ══
 function getSelModel(){return MODELS[S.selModel]||MODELS[0];}
+function getNotchType(m){
+  if(m.notch&&m.notch!=='auto')return m.notch;
+  // 自動偵測（此裝置）：依解析度對應
+  const map={
+    '750x1334':'none',
+    '1170x2532':'notch','1284x2778':'notch',
+    '1179x2556':'island','1290x2796':'island','1206x2622':'island','1320x2868':'island',
+    '1080x2340':'hole','1440x3088':'hole','1080x2400':'hole','1080x2424':'hole',
+    '1080x1920':'clear',
+  };
+  return map[`${m.w}x${m.h}`]||'clear';
+}
+function updateNotchOverlay(){
+  const nt=getNotchType(getSelModel());
+  document.querySelectorAll('.lock-overlay').forEach(el=>el.dataset.notch=nt);
+}
+// 各裝置類型的文字安全中心 Y（比例）
+// island: 島 + 日期 + 時鐘 + 小工具約佔 55~60% → 0.62
+// notch:  瀏海比動態島稍高，內容類似 → 0.61
+// hole:   打孔很小，時鐘稍高 → 0.59
+// none:   無缺口，日期/時鐘從更高開始 → 0.54
+// 橫向安全區：[leftRatio, rightRatio] 避開左側時鐘 overlay 和右側工具列按鈕
+function getLandSafeZone(){
+  const nt=getNotchType(getSelModel());
+  if(nt==='island'||nt==='notch')return[0.43,0.87]; // 左側島/瀏海+時鐘，右側閃光+相機
+  if(nt==='hole'||nt==='none')return[0.37,0.93];     // 打孔+時鐘；Android無右側按鈕
+  return[0.05,0.95];                                  // clear（桌面/通用），全域置中
+}
+// 橫向智能排版：依裝置安全區決定文字中心 X
+function getSmartTX(){
+  if(!S.land)return 0.5;
+  const z=getLandSafeZone();
+  return(z[0]+z[1])/2;
+}
+function getSmartTY(){
+  if(S.land)return 0.5; // 橫向：垂直置中
+  const nt=getNotchType(getSelModel());
+  if(nt==='clear')return 0.50;
+  if(nt==='none')return 0.70;  // SE 3：無瀏海但螢幕較矮、widgets佔比大，文字中心需落在 widget 下方
+  if(nt==='notch')return 0.61;
+  if(nt==='hole')return 0.59;
+  return 0.62;
+}
 function getExportWH(){
   const m=getSelModel();
   return S.land?{w:m.h,h:m.w}:{w:m.w,h:m.h};
@@ -351,8 +606,6 @@ function getExportWH(){
 function computeSize(){
   const isMob=window.innerWidth<=700;
   const m=getSelModel();
-  const AR=S.land?(m.h/m.w):(m.h>0?m.w/m.h:9/19);
-  // AR = w/h of the wallpaper
   let aW,aH;
   if(isMob){
     const dr=document.getElementById('mDrawer');
@@ -362,14 +615,20 @@ function computeSize(){
     aW=window.innerWidth*0.84;
   } else {
     const pa=document.getElementById('previewArea').getBoundingClientRect();
-    aH=(pa.height-80)*0.88; // leave room for download btn
+    aH=(pa.height-80)*0.88;
     aW=pa.width*0.76;
   }
-  // AR = w/h, so h = w/AR, w = h*AR
+  // AR = w/h of the wallpaper (landscape: m.h/m.w gives wide ratio)
+  const AR=S.land?(m.h/m.w):(m.h>0?m.w/m.h:9/19);
   let w=aH*AR,h=aH;
   if(w>aW){w=aW;h=w/AR;}
-  w=Math.max(100,Math.min(w,380));
-  h=Math.max(160,Math.min(h,800));
+  if(S.land){
+    w=Math.max(100,Math.min(w,700));
+    h=Math.max(60,Math.min(h,380));
+  }else{
+    w=Math.max(100,Math.min(w,380));
+    h=Math.max(160,Math.min(h,800));
+  }
   return{w:Math.round(w),h:Math.round(h)};
 }
 
@@ -381,9 +640,31 @@ function resizePreview(){
   cv.style.width=PW+'px';cv.style.height=PH+'px';
   const fr=document.getElementById('phoneFrame');
   fr.style.width=PW+'px';fr.style.height=PH+'px';
+  // Landscape: flat rounded corners; portrait: tall rounded corners
   const r=S.land?'20px':'40px';
   fr.style.borderRadius=r;cv.style.borderRadius=`calc(${r} - 3px)`;
-  document.getElementById('phoneNotch').style.display=S.land?'none':'';
+  fr.style.transform='';fr.style.marginTop='';fr.style.marginBottom='';
+  document.getElementById('phoneNotch').style.display='none';
+  const lo=document.getElementById('lockOverlay');
+  lo.classList.toggle('land',S.land);
+  lo.dataset.notch=getNotchType(getSelModel());
+  if(S.land){
+    // 整體 overlay 逆時針旋轉 90°：以直式比例（PH×PW）繪製後旋轉，效果等同各元素各自轉 -90°
+    // --pw = PH（橫向短邊 ≈ 直式手機寬）
+    const d=(PW-PH)/2;
+    lo.style.width=PH+'px';
+    lo.style.height=PW+'px';
+    lo.style.left=d+'px';
+    lo.style.top=(-d)+'px';
+    lo.style.transform='rotate(-90deg)';
+    lo.style.transformOrigin='center';
+    lo.style.setProperty('--pw',PH+'px');
+  }else{
+    lo.style.width='';lo.style.height='';
+    lo.style.left='';lo.style.top='';
+    lo.style.transform='';lo.style.transformOrigin='';
+    lo.style.setProperty('--pw',PW+'px');
+  }
   // Reset and scale context for DPR
   pCtx.setTransform(1,0,0,1,0,0);
   pCtx.scale(DPR,DPR);
@@ -411,7 +692,7 @@ function loadS(){
   if(img){photoComp=img;const i=new Image();i.onload=()=>{photoOrig=i;S.isComp=true;renderP();showCW(true);};i.src=img;}
 }
 function saveCH(){lsSet(K.ch,cHist);}
-function loadCH(){cHist=lsGet(K.ch,{solid:[],gradient:[],mesh:[],noise:[]});}
+function loadCH(){const d=lsGet(K.ch,{solid:[],gradient:[],mesh:[],noise:[],text:[],pairs:[]});if(!d.text)d.text=[];if(!d.pairs)d.pairs=[];cHist=d;}
 function saveH(){lsSet(K.h,hRecs);}
 function loadH(){
   hRecs=lsGet(K.h,[]);
@@ -471,7 +752,8 @@ const pCv=document.getElementById('previewCanvas'),pCtx=pCv.getContext('2d');
 const eCv=document.getElementById('exportCanvas'),eCtx=eCv.getContext('2d');
 
 const BASE_PW=180;
-function renderP(){draw(pCtx,PW,PH,PW/BASE_PW);}
+// 橫向時用短邊(PH)計算 ratio，避免文字因長邊而被放大
+function renderP(){draw(pCtx,PW,PH,(S.land?PH:PW)/BASE_PW);}
 
 function draw(ctx,W,H,ratio){
   ctx.clearRect(0,0,W,H);
@@ -537,12 +819,17 @@ function drawPhoto(ctx,W,H,ratio){
 function drawTXT(ctx,W,H,ratio){
   const t=S.text.trim();if(!t)return;
   const fs=S.fs*ratio;
+  if('letterSpacing' in ctx)ctx.letterSpacing=(S.ls*ratio)+'px';
   ctx.font=`${S.fw} ${fs}px ${S.font}`;
   const align=S.ta==='left'?'left':S.ta==='right'?'right':'center';
   ctx.textAlign=align;
-  const mw=W*0.84,lines=wrap(ctx,t,mw),lh=fs*S.lh,totH=lines.length*lh;
+  // 橫向智能模式：mw 限制在安全區寬度內，避免右側溢出
+  const mw=(S.smart&&S.land)?W*(getLandSafeZone()[1]-getLandSafeZone()[0])*0.94:W*0.84;
+  const lines=wrap(ctx,t,mw),lh=fs*S.lh;
+  // totH = 前(n-1)行的行距間隔 + 最後一行字高，避免行距影響中心點位置
+  const totH=(lines.length-1)*lh+fs;
   let tx,ty;
-  if(S.smart){tx=W*0.5;ty=H*0.62-totH/2;}
+  if(S.smart){tx=W*getSmartTX();ty=H*getSmartTY()-totH/2;}
   else{tx=W*S.tx;ty=H*S.ty-totH/2;}
   if(align==='left')tx=W*0.08;
   if(align==='right')tx=W*0.92;
@@ -557,6 +844,7 @@ function drawTXT(ctx,W,H,ratio){
   ctx.fillStyle=h2r(S.tc,S.to/100);
   lines.forEach((l,i)=>ctx.fillText(l,tx,ty+i*lh+fs));
   ctx.shadowColor='transparent';ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+  if('letterSpacing' in ctx)ctx.letterSpacing='0px';
 }
 function wrap(ctx,text,mw){
   const ls=[];
@@ -581,7 +869,7 @@ function doDownload(){
   const{w,h}=getExportWH();
   eCv.width=w;eCv.height=h;
   eCtx.setTransform(1,0,0,1,0,0);
-  draw(eCtx,w,h,w/BASE_PW);
+  draw(eCtx,w,h,(S.land?h:w)/BASE_PW);
   eCv.toBlob(blob=>{
     if(!blob){toast('匯出失敗','err');return;}
     const m=getSelModel();
@@ -598,13 +886,20 @@ function doDownload(){
 }
 
 function saveHRec(blob,w,h){
+  const isLand=w>h;
+  // 橫向：縮圖旋轉 90°，統一用直向卡片顯示
   const th=document.createElement('canvas');th.width=160;th.height=346;
   const tc=th.getContext('2d');
   const img=new Image();
   img.onload=()=>{
-    tc.drawImage(img,0,0,160,346);
+    if(isLand){
+      tc.save();tc.translate(160,0);tc.rotate(Math.PI/2);
+      tc.drawImage(img,0,0,346,160);tc.restore();
+    } else {
+      tc.drawImage(img,0,0,160,346);
+    }
     const td=th.toDataURL('image/jpeg',0.7);
-    const rec={id:Date.now(),thumb:td,text:S.text.slice(0,20),
+    const rec={id:Date.now(),thumb:td,land:isLand,text:S.text.slice(0,20),
       time:new Date().toLocaleString('zh-TW',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}),
       state:JSON.stringify({...S,_imgFp:storePhoto(photoComp||null)}),starred:false,comp:S.isComp};
     const uns=hRecs.filter(r=>!r.starred);
@@ -623,8 +918,10 @@ function addCH(type,color){
   if(h.find(x=>JSON.stringify(x.color)===k))return;
   const uns=h.filter(x=>!x.starred);
   if(h.length>=15&&uns.length===0){toast('所有顏色已鎖定，請移除部分星號','warn');return;}
-  while(h.length>=15){const i=h.findIndex(x=>!x.starred);if(i===-1)break;h.splice(i,1);}
-  h.unshift({color,starred:false});saveCH();
+  while(h.length>=15){let i=-1;for(let j=h.length-1;j>=0;j--){if(!h[j].starred){i=j;break;}}if(i===-1)break;h.splice(i,1);}
+  // 插在最後一個已星號項目後面；若無星號則插到最前
+  const lastStarred=h.reduce((acc,x,i)=>x.starred?i:acc,-1);
+  h.splice(lastStarred+1,0,{color,starred:false});saveCH();
 }
 
 // ══ DICE (true random) ══
@@ -648,7 +945,7 @@ function initCanvas(){
   ['mouseup','touchend'].forEach(e=>pCv.addEventListener(e,pUp));
 }
 function hitTxt(x,y){
-  const tx=S.smart?PW*0.5:PW*S.tx,ty=S.smart?PH*0.62:PH*S.ty;
+  const tx=S.smart?PW*getSmartTX():PW*S.tx,ty=S.smart?PH*getSmartTY():PH*S.ty;
   return Math.abs(x-tx)<PW*0.46&&Math.abs(y-ty)<PH*0.26;
 }
 function pDown(e){
@@ -730,11 +1027,60 @@ function buildFD(container){
     }
   });
   mn.querySelectorAll('.fopt').forEach(o=>o.addEventListener('click',()=>{
-    S.font=o.dataset.v;mn.classList.remove('open');tr.classList.remove('open');
-    snap();saveS();renderP();buildUI();
+    S.font=o.dataset.v;
+    const ws=curFontWeights();if(!ws.includes(S.fw))S.fw=ws.includes('400')?'400':ws[0];
+    mn.classList.remove('open');tr.classList.remove('open');
+    snap();saveS();buildUI();
+    // 等該字體的所有文字 subset 載入後再畫，避免部分字還是舊字體
+    const spec=`${S.fw} ${S.fs}px ${S.font}`;
+    document.fonts.load(spec,S.text).then(()=>renderP()).catch(()=>renderP());
   }));
 }
 document.addEventListener('click',()=>document.querySelectorAll('.fmenu.open').forEach(m=>{m.classList.remove('open');if(m.previousElementSibling)m.previousElementSibling.classList.remove('open');}));
+
+// ══ PAIR RENDER & HANDLERS ══
+function renderPairs(){
+  document.querySelectorAll('.pair-grid').forEach(el=>{
+    const ps=cHist.pairs||[];
+    if(!ps.length){el.innerHTML='<span class="pair-empty">尚無配色，點右上角 ＋ 儲存</span>';return;}
+    el.innerHTML=ps.map((p,i)=>`
+      <div class="pair-item">
+        <div class="pair-swatch" style="background:${p.sc}" onclick="applyPair(${i})" title="套用 — 文字 ${p.tc} ／ 背景 ${p.sc}">
+          <span class="pair-char" style="color:${p.tc}">文</span>
+        </div>
+        <div class="pair-actions">
+          <button class="pair-star${p.starred?' on':''}" onclick="togglePairStar(${i})">${p.starred?'★':'☆'}</button>
+          <button class="pair-del" onclick="delPair(${i})">✕</button>
+        </div>
+      </div>`).join('');
+  });
+}
+window.addPair=function(){
+  if(!cHist.pairs)cHist.pairs=[];
+  if(cHist.pairs.some(p=>p.tc===S.tc&&p.sc===S.sc)){toast('此配色已儲存');return;}
+  cHist.pairs.unshift({tc:S.tc,sc:S.sc,starred:false});
+  saveCH();renderPairs();toast('已儲存配色組合');
+};
+window.applyPair=function(i){
+  const p=(cHist.pairs||[])[i];if(!p)return;
+  S.tc=p.tc;S.sc=p.sc;S.bgs='solid';
+  snap();saveS();renderP();buildUI();
+  toast('已套用配色');
+};
+window.togglePairStar=function(i){
+  const ps=cHist.pairs||[];if(!ps[i])return;
+  ps[i].starred=!ps[i].starred;
+  if(ps[i].starred){const it=ps.splice(i,1)[0];ps.unshift(it);}
+  saveCH();renderPairs();
+};
+window.delPair=function(i){
+  (cHist.pairs||[]).splice(i,1);
+  saveCH();renderPairs();
+};
+window.clearPairs=function(){
+  cHist.pairs=(cHist.pairs||[]).filter(p=>p.starred);
+  saveCH();renderPairs();
+};
 
 // ══ COLOR HIST RENDER ══
 function renderCH(elId,type,activeC){
@@ -744,12 +1090,17 @@ function renderCH(elId,type,activeC){
       const d=document.createElement('div');
       d.className='chit'+(item.starred?' starred':'');
       let bg;
-      if(type==='solid'||type==='noise'){bg=item.color;if(item.color===activeC)d.classList.add('active-c');}
+      if(type==='solid'||type==='noise'||type==='text'){bg=item.color;if(item.color===activeC)d.classList.add('active-c');}
       else if(type==='gradient')bg=`linear-gradient(135deg,${item.color.g1},${item.color.g2})`;
       else if(type==='mesh')bg=`linear-gradient(135deg,${item.color.join(',')})`;
       d.style.background=bg;
       const star=document.createElement('div');star.className='chit-star';star.textContent=item.starred?'★':'☆';
-      star.onclick=e=>{e.stopPropagation();item.starred=!item.starred;saveCH();renderCH(elId,type,activeC);};
+      star.onclick=e=>{
+        e.stopPropagation();
+        item.starred=!item.starred;
+        if(item.starred){cHist[type].splice(idx,1);cHist[type].unshift(item);}
+        saveCH();renderCH(elId,type,activeC);
+      };
       const del=document.createElement('div');del.className='chit-del';del.textContent='✕';
       del.onclick=e=>{e.stopPropagation();cHist[type].splice(idx,1);saveCH();renderCH(elId,type,activeC);};
       d.appendChild(star);d.appendChild(del);
@@ -758,6 +1109,7 @@ function renderCH(elId,type,activeC){
         else if(type==='noise'){S.nc=item.color;noiseCache=null;}
         else if(type==='gradient'){S.g1=item.color.g1;S.g2=item.color.g2;}
         else if(type==='mesh')S.mc=item.color.slice();
+        else if(type==='text')S.tc=item.color;
         saveS();snap();renderP();buildUI();
       };
       con.appendChild(d);
@@ -778,15 +1130,11 @@ function renderHTab(){
     }
     hRecs.forEach((rec,idx)=>{
       const d=document.createElement('div');d.className='hist-item';
-      d.innerHTML=`<img class="hist-thumb" src="${rec.thumb}" loading="lazy">
-        <div class="hist-info">
-          <div class="hist-text">${rec.text||'（無文字）'}</div>
-          <div class="hist-time">${rec.time}${rec.comp?' · 壓縮版':''}</div>
-          <div class="hist-actions">
-            <button class="hist-star${rec.starred?' on':''}">${rec.starred?'★':'☆'}</button>
-            <button class="hist-del">✕</button>
-          </div>
-        </div>`;
+      d.innerHTML=`
+        <img class="hist-thumb${rec.land?' land':''}" src="${rec.thumb}" loading="lazy">
+        <div class="hist-info"><div class="hist-time">${rec.time}</div></div>
+        <button class="hist-star${rec.starred?' on':''}">${rec.starred?'★':'☆'}</button>
+        <button class="hist-del">✕</button>`;
       d.querySelector('.hist-star').onclick=e=>{e.stopPropagation();rec.starred=!rec.starred;saveH();renderHTab();};
       d.querySelector('.hist-del').onclick=e=>{e.stopPropagation();hRecs.splice(idx,1);saveH();renderHTab();};
       d.onclick=()=>restoreH(rec);
@@ -808,24 +1156,27 @@ function restoreH(rec){
 
 // ══ PANEL HTML ══
 function pText(){
-  const tc=TEXT_COLORS.map(c=>`<div class="tcswatch${S.tc===c.h?' active':''}" style="background:${c.h};${c.h==='#000000'||c.h==='#1c1814'?'border:2px solid var(--border2)':''}" title="${c.n}" onclick="setTC('${c.h}')"></div>`).join('');
+  const tc=TEXT_COLORS.map(c=>`<div class="tcswatch${S.tc===c.h?' active':''}" style="background:${c.h};${['#000000','#2a2118','#1c1814'].includes(c.h)?'border:2px solid var(--border2)':''}" title="${c.n}（${c.h}）" onclick="setTC('${c.h}')"></div>`).join('');
   const cc=S.text.length,near=cc>=120,over=cc>MAX_CHARS;
-  return `<div class="sec"><div class="sec-label">📝 文字內容</div>
+  return `<div class="sec"><div class="sec-header"><div class="sec-label">📝 文字內容</div><div style="display:flex;gap:6px"><button class="sec-reset" onclick="S.text='';snap();saveS();renderP();buildUI()" style="color:var(--danger);border-color:var(--danger)">✕ 清除</button><button class="sec-reset" onclick="resetSec('text')">↺ 預設</button></div></div>
     <textarea id="ta" maxlength="${MAX_CHARS}">${S.text}</textarea>
     <div class="char-count${near?' near':''}${over?' over':''}">${cc} / ${MAX_CHARS}</div>
   </div>
-  <div class="sec"><div class="sec-label">字體</div>
+  <div class="sec"><div class="sec-header"><div class="sec-label">字體</div><button class="sec-reset" onclick="resetSec('font')">↺ 預設</button></div>
     <div class="fdrop" id="fdrop_p"></div>
     <div class="btngrp" style="margin-top:8px">
-      <div class="btn${S.fw==='300'?' active':''}" onclick="sv('fw','300')">Light</div>
-      <div class="btn${S.fw==='400'?' active':''}" onclick="sv('fw','400')">Regular</div>
-      <div class="btn${S.fw==='700'?' active':''}" onclick="sv('fw','700')">Bold</div>
+      <div class="btn${S.fw==='300'?' active':''}${curFontWeights().includes('300')?'':' btn-disabled'}" onclick="sv('fw','300')">Light</div>
+      <div class="btn${S.fw==='400'?' active':''}${curFontWeights().includes('400')?'':' btn-disabled'}" onclick="sv('fw','400')">Regular</div>
+      <div class="btn${S.fw==='700'?' active':''}${curFontWeights().includes('700')?'':' btn-disabled'}" onclick="sv('fw','700')">Bold</div>
     </div>
     <div class="srow"><label>大小</label><input type="range" id="sl_fs" min="14" max="80" value="${S.fs}"><span class="sval" id="sv_fs">${S.fs}</span></div>
     <div class="srow"><label>行距</label><input type="range" id="sl_lh" min="10" max="30" value="${Math.round(S.lh*10)}"><span class="sval" id="sv_lh">${S.lh.toFixed(1)}</span></div>
+    <div class="srow"><label>字距</label><input type="range" id="sl_ls" min="0" max="20" value="${S.ls}"><span class="sval" id="sv_ls">${S.ls}</span></div>
   </div>
-  <div class="sec"><div class="sec-label">顏色 & 對齊</div>
+  <div class="sec"><div class="sec-header"><div class="sec-label">顏色 & 對齊</div><button class="sec-reset" onclick="resetSec('color')">↺ 預設</button></div>
     <div class="swatch-row">${tc}<input type="color" id="tcCustom" value="${S.tc}" style="width:26px;height:26px;border-radius:50%;padding:1px;border:2px solid var(--border);cursor:pointer;background:none" title="自訂"></div>
+    <div class="chist-row"><span class="chist-label">自訂歷史</span><button class="chist-clr-btn" onclick="clearCHType('text','ch_tc','${S.tc}')">清除未星號</button></div>
+    <div class="chist-scroll" id="ch_tc"></div>
     <div class="srow"><label>透明度</label><input type="range" id="sl_to" min="20" max="100" value="${S.to}"><span class="sval" id="sv_to">${S.to}%</span></div>
     <div class="row"><label>對齊</label>
       <div class="align-btns">
@@ -835,11 +1186,11 @@ function pText(){
       </div>
     </div>
   </div>
-  <div class="sec"><div class="sec-label">陰影</div>
+  <div class="sec"><div class="sec-header"><div class="sec-label">陰影</div><button class="sec-reset" onclick="resetSec('shadow')">↺ 預設</button></div>
     <div class="toggle-row"><span>文字陰影</span><div class="tog${S.shOn?' on':''}" id="tog_sh"></div></div>
     <div class="srow"><label>強度</label><input type="range" id="sl_sh" min="0" max="40" value="${S.shAmt}"><span class="sval" id="sv_sh">${S.shAmt}</span></div>
   </div>
-  <div class="sec"><div class="sec-label">文字背景色塊</div>
+  <div class="sec"><div class="sec-header"><div class="sec-label">文字背景色塊</div><button class="sec-reset" onclick="resetSec('textbg')">↺ 預設</button></div>
     <div class="toggle-row"><span>啟用色塊</span><div class="tog${S.bgOn?' on':''}" id="tog_bgb"></div></div>
     <div class="cir"><label>顏色</label><input type="color" id="cp_bgc" value="${S.bgCol}"></div>
     <div class="srow"><label>透明度</label><input type="range" id="sl_bgo" min="5" max="95" value="${S.bgOp}"><span class="sval" id="sv_bgo">${S.bgOp}%</span></div>
@@ -847,11 +1198,15 @@ function pText(){
 }
 
 function pBg(){
-  const solidSw=[...WARM_DARK,...WARM_LIGHT].map(c=>`<div class="sw${S.sc===c?' active':''}" style="background:${c}" onclick="pSolid('${c}')"></div>`).join('');
-  const noiseSw=[...WARM_DARK.slice(0,4),...WARM_LIGHT.slice(0,4)].map(c=>`<div class="sw${S.nc===c?' active':''}" style="background:${c}" onclick="pNoise('${c}')"></div>`).join('');
-  const gradSw=GRAD_PRESETS.map(([c1,c2])=>`<div class="sw" style="background:linear-gradient(135deg,${c1},${c2});width:36px;height:22px;border-radius:6px" onclick="pGrad('${c1}','${c2}')"></div>`).join('');
-  const meshSw=MESH_PRESETS.map(m=>`<div class="sw" style="background:linear-gradient(135deg,${m.join(',')});width:40px;height:22px;border-radius:6px" onclick="pMesh(${JSON.stringify(m).replace(/"/g,"'")})"></div>`).join('');
-  return `<div class="sec"><div class="sec-label">背景風格</div>
+  const solidSw=[...WARM_LIGHT,...WARM_DARK].map(c=>`<div class="sw${S.sc===c?' active':''}" style="background:${c}" title="${c}" onclick="pSolid('${c}')"></div>`).join('');
+  const noiseSw=[...WARM_LIGHT,...WARM_DARK].map(c=>`<div class="sw${S.nc===c?' active':''}" style="background:${c}" title="${c}" onclick="pNoise('${c}')"></div>`).join('');
+  const gradSw=GRAD_PRESETS.map(([c1,c2])=>`<div class="sw" style="background:linear-gradient(135deg,${c1},${c2});width:36px;height:22px;border-radius:6px" title="${c1} → ${c2}" onclick="pGrad('${c1}','${c2}')"></div>`).join('');
+  const meshSw=MESH_PRESETS.map(m=>`<div class="sw" style="background:linear-gradient(135deg,${m.join(',')});width:40px;height:22px;border-radius:6px" title="${m.join(' · ')}" onclick="pMesh(${JSON.stringify(m).replace(/"/g,"'")})"></div>`).join('');
+  return `<div class="sec"><div class="sec-header"><div class="sec-label">🎨 配色組合</div><div style="display:flex;gap:6px"><button class="sec-reset" onclick="clearPairs()" style="color:var(--text3)">清除未星號</button><button class="sec-reset" onclick="addPair()">＋ 儲存當前</button></div></div>
+    <div class="pair-grid"></div>
+    <p style="font-size:0.68rem;color:var(--text3);margin-top:6px;line-height:1.5">儲存當下的<b>文字色 + 背景色</b>組合，點擊一鍵套用；★ 固定不清除</p>
+  </div>
+  <div class="sec"><div class="sec-header"><div class="sec-label">背景風格</div><button class="sec-reset" onclick="resetSec('bg')">↺ 預設</button></div>
     <div class="stabs">
       <div class="stab${S.bgs==='solid'?' active':''}" onclick="setBG('solid')">單色</div>
       <div class="stab${S.bgs==='gradient'?' active':''}" onclick="setBG('gradient')">漸層</div>
@@ -863,7 +1218,7 @@ function pBg(){
   <div id="bg_solid" style="display:${S.bgs==='solid'?'block':'none'}">
     <div class="sec"><div class="sec-label">單色</div>
       <div class="swatch-row">${solidSw}</div>
-      <div class="dice-row"><div class="dice-btn" onclick="dice('solid')">🎲</div><span class="chist-label">顏色歷史</span></div>
+      <div class="dice-row"><div class="dice-btn" onclick="dice('solid')">🎲</div><span class="chist-label">顏色歷史</span><button class="chist-clr-btn" onclick="clearCHType('solid','ch_solid','${S.sc}')">清除未星號</button></div>
       <div class="chist-scroll" id="ch_solid"></div>
       <div class="cir" style="margin-top:6px"><label>自訂</label><input type="color" id="cp_sc" value="${S.sc}"></div>
     </div>
@@ -871,7 +1226,7 @@ function pBg(){
   <div id="bg_gradient" style="display:${S.bgs==='gradient'?'block':'none'}">
     <div class="sec"><div class="sec-label">漸層</div>
       <div class="swatch-row">${gradSw}</div>
-      <div class="dice-row"><div class="dice-btn" onclick="dice('gradient')">🎲</div><span class="chist-label">漸層歷史</span></div>
+      <div class="dice-row"><div class="dice-btn" onclick="dice('gradient')">🎲</div><span class="chist-label">漸層歷史</span><button class="chist-clr-btn" onclick="clearCHType('gradient','ch_grad',null)">清除未星號</button></div>
       <div class="chist-scroll" id="ch_grad"></div>
       <div class="cir" style="margin-top:6px"><label>起色</label><input type="color" id="cp_g1" value="${S.g1}"><label>終色</label><input type="color" id="cp_g2" value="${S.g2}"></div>
       <div class="row" style="margin-top:5px"><label>方向</label>
@@ -887,14 +1242,14 @@ function pBg(){
   <div id="bg_mesh" style="display:${S.bgs==='mesh'?'block':'none'}">
     <div class="sec"><div class="sec-label">色塊漸層</div>
       <div class="swatch-row">${meshSw}</div>
-      <div class="dice-row"><div class="dice-btn" onclick="dice('mesh')">🎲</div><span class="chist-label">色塊歷史</span></div>
+      <div class="dice-row"><div class="dice-btn" onclick="dice('mesh')">🎲</div><span class="chist-label">色塊歷史</span><button class="chist-clr-btn" onclick="clearCHType('mesh','ch_mesh',null)">清除未星號</button></div>
       <div class="chist-scroll" id="ch_mesh"></div>
     </div>
   </div>
   <div id="bg_noise" style="display:${S.bgs==='noise'?'block':'none'}">
     <div class="sec"><div class="sec-label">噪點質感</div>
       <div class="swatch-row">${noiseSw}</div>
-      <div class="dice-row"><div class="dice-btn" onclick="dice('noise')">🎲</div><span class="chist-label">顏色歷史</span></div>
+      <div class="dice-row"><div class="dice-btn" onclick="dice('noise')">🎲</div><span class="chist-label">顏色歷史</span><button class="chist-clr-btn" onclick="clearCHType('noise','ch_noise','${S.nc}')">清除未星號</button></div>
       <div class="chist-scroll" id="ch_noise"></div>
       <div class="cir" style="margin-top:6px"><label>自訂</label><input type="color" id="cp_nc" value="${S.nc}"></div>
       <div class="srow"><label>強度</label><input type="range" id="sl_na" min="5" max="60" value="${S.na}"><span class="sval" id="sv_na">${S.na}</span></div>
@@ -919,7 +1274,7 @@ function pLayout(){
       <span class="size-item-res">${res}</span>
     </div>`;
   }).join('');
-  return `<div class="sec"><div class="sec-label">排版</div>
+  return `<div class="sec"><div class="sec-header"><div class="sec-label">排版</div><button class="sec-reset" onclick="resetSec('layout')">↺ 預設</button></div>
     <div class="toggle-row"><span>🤖 智能排版（自動避開時鐘）</span><div class="tog${S.smart?' on':''}" id="tog_sm"></div></div>
     <p style="font-size:0.7rem;color:var(--text3);margin-top:5px;line-height:1.6">關閉後可在預覽畫面直接拖動文字<br>拖動時會自動切換為手動排版</p>
   </div>
@@ -968,6 +1323,10 @@ const TABS=[
 let activeTab='text';
 
 function buildUI(){
+  // 保存各 panel 的滾動位置
+  const scrollSave={};
+  document.querySelectorAll('.d-panel,.m-panel').forEach(p=>{scrollSave[p.id]=p.scrollTop;});
+
   const dNav=document.getElementById('dNav'),dPanels=document.getElementById('dPanels');
   dNav.innerHTML='';dPanels.innerHTML='';
   const mNav=document.getElementById('mNav'),mPanels=document.getElementById('mPanels');
@@ -1002,10 +1361,18 @@ function buildUI(){
   renderCH('ch_grad','gradient',null);
   renderCH('ch_mesh','mesh',null);
   renderCH('ch_noise','noise',S.nc);
+  renderCH('ch_tc','text',S.tc);
+  renderPairs();
   renderHTab();
   showCW(S.isComp);
   updateMeta();
   document.getElementById('imgControls').classList.toggle('visible',S.bgs==='photo'&&!!photoOrig);
+
+  // 還原各 panel 滾動位置
+  document.querySelectorAll('.d-panel,.m-panel').forEach(p=>{
+    if(scrollSave[p.id])p.scrollTop=scrollSave[p.id];
+  });
+  updateNotchOverlay();
 }
 
 function switchTab(id){
@@ -1021,16 +1388,16 @@ function openDrawer(){document.getElementById('mDrawer').classList.add('open');}
 
 // ══ GLOBAL HANDLERS ══
 window.sv=(k,v)=>{S[k]=v;snap();saveS();renderP();buildUI();};
-window.setTC=(h)=>{S.tc=h;snap();saveS();renderP();buildUI();};
+window.setTC=(h)=>{S.tc=h;snap();saveS();renderP();buildUI();setTimeout(()=>{addCH('text',h);saveCH();renderCH('ch_tc','text',h);},400);};
 window.setBG=(s)=>{
   S.bgs=s;
   document.getElementById('imgControls').classList.toggle('visible',s==='photo'&&!!photoOrig);
   snap();saveS();renderP();buildUI();
 };
-window.pSolid=(c)=>{S.sc=c;addCH('solid',c);snap();saveS();renderP();buildUI();};
-window.pNoise=(c)=>{S.nc=c;noiseCache=null;addCH('noise',c);snap();saveS();renderP();buildUI();};
-window.pGrad=(c1,c2)=>{S.g1=c1;S.g2=c2;addCH('gradient',{g1:c1,g2:c2,dir:S.gd});snap();saveS();renderP();buildUI();};
-window.pMesh=(m)=>{S.mc=m.slice();addCH('mesh',m.slice());snap();saveS();renderP();buildUI();};
+window.pSolid=(c)=>{S.sc=c;snap();saveS();renderP();buildUI();};
+window.pNoise=(c)=>{S.nc=c;noiseCache=null;snap();saveS();renderP();buildUI();};
+window.pGrad=(c1,c2)=>{S.g1=c1;S.g2=c2;snap();saveS();renderP();buildUI();};
+window.pMesh=(m)=>{S.mc=m.slice();snap();saveS();renderP();buildUI();};
 window.dice=dice;
 window.doDownload=doDownload;
 window.selModel=(i)=>{S.selModel=i;saveS();resizePreview();renderP();buildUI();updateMeta();};
@@ -1042,6 +1409,22 @@ window.resetSettings=()=>{
   snap();saveS();resizePreview();renderP();buildUI();
   toast('已重置所有設定');
 };
+window.clearCHType=function(type,elId,activeC){
+  cHist[type]=cHist[type].filter(x=>x.starred);
+  saveCH();renderCH(elId,type,activeC);
+};
+window.resetSec=function(key){
+  const d=DS();
+  if(key==='text'){S.text=d.text;}
+  else if(key==='font'){S.font=d.font;S.fw=d.fw;S.fs=d.fs;S.lh=d.lh;S.ls=d.ls;}
+  else if(key==='color'){S.tc=d.tc;S.to=d.to;S.ta=d.ta;}
+  else if(key==='shadow'){S.shOn=d.shOn;S.shAmt=d.shAmt;}
+  else if(key==='textbg'){S.bgOn=d.bgOn;S.bgCol=d.bgCol;S.bgOp=d.bgOp;}
+  else if(key==='bg'){S.bgs=d.bgs;S.sc=d.sc;S.g1=d.g1;S.g2=d.g2;S.gd=d.gd;S.mc=d.mc.slice();S.nc=d.nc;S.na=d.na;noiseCache=null;}
+  else if(key==='layout'){S.smart=d.smart;S.tx=d.tx;S.ty=d.ty;}
+  snap();saveS();resizePreview();renderP();buildUI();
+  toast('已重置為預設');
+};
 window.clearHist=()=>{
   hRecs=hRecs.filter(r=>r.starred);
   saveH();prunePhotos();renderHTab();toast('已清除無星號紀錄');
@@ -1049,8 +1432,9 @@ window.clearHist=()=>{
 window.shareW=async function(){
   const{w,h}=getExportWH();
   eCv.width=w;eCv.height=h;eCtx.setTransform(1,0,0,1,0,0);
-  draw(eCtx,w,h,w/PW);
+  draw(eCtx,w,h,(S.land?h:w)/BASE_PW);
   eCv.toBlob(async blob=>{
+    saveHRec(blob,w,h);
     if(navigator.share&&navigator.canShare&&navigator.canShare({files:[new File([blob],'w.png',{type:'image/png'})]})){
       try{await navigator.share({files:[new File([blob],'wallpaper.png',{type:'image/png'})],title:'我的壁紙'});}
       catch(e){if(e.name!=='AbortError')doDownload();}
@@ -1068,9 +1452,12 @@ function bindInputs(){
   // textarea
   document.querySelectorAll('#ta').forEach(el=>{
     el.value=S.text;
+    const autoResize=()=>{el.style.height='auto';el.style.height=(el.scrollHeight||100)+'px';};
+    requestAnimationFrame(autoResize);
     el.oninput=()=>{
       if(el.value.length>MAX_CHARS){el.value=el.value.slice(0,MAX_CHARS);}
       S.text=el.value;
+      autoResize();
       const cc=S.text.length;
       document.querySelectorAll('.char-count').forEach(c=>{
         c.textContent=`${cc} / ${MAX_CHARS}`;
@@ -1101,12 +1488,17 @@ function bindInputs(){
   // custom text color
   document.querySelectorAll('#tcCustom').forEach(el=>{
     el.value=S.tc;
-    el.oninput=()=>{S.tc=el.value;renderP();saveS();clearTimeout(el._t);el._t=setTimeout(()=>snap(),400);};
+    el.oninput=()=>{
+      S.tc=el.value;renderP();saveS();
+      clearTimeout(el._t);
+      el._t=setTimeout(()=>{addCH('text',S.tc);saveCH();snap();renderCH('ch_tc','text',S.tc);},500);
+    };
   });
   // sliders
   [
     ['sl_fs','fs',v=>parseInt(v),'sv_fs',v=>v,false],
     ['sl_lh','lh',v=>parseInt(v)/10,'sv_lh',v=>v.toFixed(1),false],
+    ['sl_ls','ls',v=>parseInt(v),'sv_ls',v=>v,false],
     ['sl_to','to',v=>parseInt(v),'sv_to',v=>v+'%',false],
     ['sl_sh','shAmt',v=>parseInt(v),'sv_sh',v=>v,false],
     ['sl_bgo','bgOp',v=>parseInt(v),'sv_bgo',v=>v+'%',false],
@@ -1215,8 +1607,19 @@ function loadURL(){
   try{Object.assign(S,JSON.parse(decodeURIComponent(atob(p))));toast('已從連結載入設定');}catch(e){}
 }
 
+// ══ LOCK CLOCK ══
+const WEEKDAYS=['週日','週一','週二','週三','週四','週五','週六'];
+function updateLoClock(){
+  const now=new Date();
+  const h=now.getHours(),m=now.getMinutes();
+  document.getElementById('loClock').textContent=`${h}:${String(m).padStart(2,'0')}`;
+  document.getElementById('loDate').textContent=`${WEEKDAYS[now.getDay()]} ${now.getMonth()+1}月${now.getDate()}日`;
+}
+updateLoClock();
+setInterval(updateLoClock,10000);
+
 // ══ INIT ══
-loadURL();loadS();loadCH();loadH();
+loadS();loadURL();loadCH();loadH();
 setDrawerH();
 document.fonts.ready.then(()=>{
   requestAnimationFrame(()=>{
