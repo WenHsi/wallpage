@@ -1580,6 +1580,12 @@ document.getElementById('mHandle').addEventListener('click',e=>{
   if(e.target.closest('.m-tab-btn'))return;
   document.getElementById('mDrawer').classList.toggle('open');
 });
+// 點預覽背景空白區關閉抽屜
+document.querySelector('.preview-area').addEventListener('click',e=>{
+  if(e.target!==e.currentTarget)return; // 排除 canvas、按鈕等子元素
+  const dr=document.getElementById('mDrawer');
+  if(dr.classList.contains('open')){dr.classList.remove('open');}
+});
 function setDrawerH(){
   const h=Math.round(window.innerHeight*0.46);
   document.getElementById('mDrawer').style.setProperty('--drawer-h',h+'px');
