@@ -56,6 +56,12 @@
 
 ---
 
+## License
+
+MIT © 2026 wenhsi
+
+---
+
 ## 作者
 
 Made by [wenhsi](https://github.com/WenHsi)
